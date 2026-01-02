@@ -10,8 +10,7 @@ extends VehicleBody3D
 @onready var wheel_bl: VehicleWheel3D = $VehicleWheelBackLeft
 @onready var wheel_br: VehicleWheel3D = $VehicleWheelBackRight
 
-@export var AIR_STABILIZE_STRENGTH := 8.0
-@export var AIR_DAMPING := 4.0
+var grounded = false
 
 func _physics_process(delta: float) -> void:
 	var input := Input.get_axis("Break", "Gas")
@@ -19,11 +18,10 @@ func _physics_process(delta: float) -> void:
 	var steerValue = Input.get_axis("Right", "Left") * MAX_STEER
 	
 	#Check Grounded
-	var grounded := (wheel_fl.is_in_contact() or
-					 wheel_fr.is_in_contact() or
-					 wheel_bl.is_in_contact() or
-					 wheel_br.is_in_contact()
-	)
+	if wheel_fl.is_in_contact() and wheel_fr.is_in_contact() and wheel_bl.is_in_contact() and wheel_br.is_in_contact():
+		grounded = true
+	else:
+		grounded = false
 	
 	#Steering
 	if grounded:
@@ -43,8 +41,12 @@ func _physics_process(delta: float) -> void:
 	else:
 		engine_force = 0
 	
+	if not grounded:
+		angular_velocity = Vector3(0,0,0)
+	
 	#Clamp Max Speed
 	if speed > MAX_SPEED:
 		linear_velocity = linear_velocity.normalized() * MAX_SPEED
 	
+	print(grounded)
 	
