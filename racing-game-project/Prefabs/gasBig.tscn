@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjp1miyepsf4v"]
+
+[ext_resource type="PackedScene" uid="uid://f58twdkoc7ye" path="res://Models/jerrycan_low/jerrycan_low.fbx" id="1_sa7ry"]
+[ext_resource type="Script" uid="uid://b7fmkaogxdjyh" path="res://Scripts/gasAnim.gd" id="2_d4wx6"]
+[ext_resource type="Texture2D" uid="uid://c8ljbxl4vo5la" path="res://Models/jerrycan_low/textures/jerrycan_mat_Diffuse.png" id="2_g0lp2"]
+[ext_resource type="Texture2D" uid="uid://dppbqgdmru8cj" path="res://Models/jerrycan_low/textures/jerrycan_mat_Normal.png" id="3_d4wx6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tq3q2"]
+albedo_texture = ExtResource("2_g0lp2")
+normal_enabled = true
+normal_texture = ExtResource("3_d4wx6")
+
+[node name="jerrycan_low" instance=ExtResource("1_sa7ry")]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+script = ExtResource("2_d4wx6")
+
+[node name="jerrycan_geo_low" parent="jerrycan_grp_low" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_tq3q2")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
+transform = Transform3D(1.4285715, 0, 0, 0, -6.244484e-08, 1.4285715, 0, -1.4285715, -6.244484e-08, 0, 0, 0)
+light_color = Color(0.64427364, 0, 0.015360256, 1)
+spot_angle = 73.765564

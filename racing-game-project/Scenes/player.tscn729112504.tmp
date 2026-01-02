@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjyig8s5hrcwe"]
+
+[ext_resource type="Script" uid="uid://dwmfy12436a3c" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="ArrayMesh" uid="uid://s56klw7rgemv" path="res://Models/Kenney-Models/raceCarRed.obj" id="2_6t5aa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vgqql"]
+size = Vector3(0.8652344, 0.27947998, 1)
+
+[node name="VehicleBody3D" type="VehicleBody3D"]
+script = ExtResource("1_cvnsp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.18323609, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0.034, 0)
+shape = SubResource("BoxShape3D_vgqql")
+
+[node name="RaceCarRed" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = ExtResource("2_6t5aa")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9951384, 0.098486096, 0, -0.098486096, 0.9951384, 0, 0.24723634, 0.45702302)
+spring_length = 0.2
+margin = 0.2
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm3D"]
+current = true
+
+[node name="VehicleWheel3D2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-0.075, 0, -6.5567085e-09, 0, 0.075, 0, 6.5567085e-09, 0, -0.075, 0.08, 0.029, 0.11866526)
+
+[node name="VehicleWheel3D" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-0.075, 0, -1.1324686e-08, 0, 0.075, 0, 1.1324686e-08, 0, -0.075, 0.08006054, 0.029330887, -0.08241272)
+
+[node name="VehicleWheel3D3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-0.075, 0, -6.5567085e-09, 0, 0.075, 0, 6.5567085e-09, 0, -0.075, -0.07870738, 0.029, -0.082)
+
+[node name="VehicleWheel3D4" type="VehicleWheel3D" parent="."]
+transform = Transform3D(-0.075, 0, -6.5567085e-09, 0, 0.075, 0, 6.5567085e-09, 0, -0.075, -0.07870738, 0.029, 0.1186301)

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gf1gem4d7til"
+path="res://.godot/imported/barrierWall.obj-2739c2c695b8c87e343fd270eb26956b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/barrierWall.obj-2739c2c695b8c87e343fd270eb26956b.mesh"]
+
+source_file="res://Models/Kenney-Models/barrierWall.obj"
+dest_files=["res://.godot/imported/barrierWall.obj-2739c2c695b8c87e343fd270eb26956b.mesh", "res://.godot/imported/barrierWall.obj-2739c2c695b8c87e343fd270eb26956b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

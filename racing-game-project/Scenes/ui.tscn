@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://n0idhsr7m3yc"]
+
+[ext_resource type="Texture2D" uid="uid://tc5edju3gn8u" path="res://Textures/gas-can.png" id="1_jxero"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 14.0
+offset_right = 347.0
+offset_bottom = 41.0
+value = 85.0
+
+[node name="GasCan" type="Sprite2D" parent="."]
+position = Vector2(28, 27.000008)
+scale = Vector2(0.068359375, 0.068359375)
+texture = ExtResource("1_jxero")
