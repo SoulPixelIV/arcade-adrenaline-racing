@@ -93,9 +93,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cfix5")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3icqa"]
-size = Vector3(1, 1.401123, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3uukp"]
 resource_name = "grey"
 albedo_color = Color(0.9754679, 0.9772474, 0.98432255, 1)
@@ -317,6 +314,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h4e1r")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y6xdh"]
+
 [node name="VehicleBody3D" type="VehicleBody3D"]
 script = ExtResource("1_y6xdh")
 
@@ -326,10 +325,6 @@ script = ExtResource("1_y6xdh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.30750003, 0.047977835, 0.65999997)
 mesh = SubResource("ArrayMesh_3icqa")
 skeleton = NodePath("")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0.1255422, 0)
-shape = SubResource("BoxShape3D_3icqa")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, -1.7763568e-15, -8.742277e-08, -2.6774122e-08, 0.9519478, 0.30626026, 8.322192e-08, 0.30626026, -0.9519478, 0, 0.7474654, -1.3656598)
@@ -381,3 +376,7 @@ suspension_travel = 0.1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07954535, -0.0006476268, 0.00031405687)
 mesh = SubResource("ArrayMesh_2nftw")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0.10324231, 0)
+shape = SubResource("BoxShape3D_y6xdh")
