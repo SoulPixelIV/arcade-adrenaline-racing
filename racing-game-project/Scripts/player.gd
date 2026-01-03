@@ -33,13 +33,10 @@ func _physics_process(delta: float) -> void:
 		steering = move_toward(steering, 0.0, delta * 5.0)
 	
 	#Forward & Backward
-	if grounded:
-		if input != 0:
-			engine_force = Input.get_axis("Break", "Gas") * ENGINE_POWER
-		else:
-			engine_force = sign(speed) * ENGINE_BRAKE
+	if input != 0:
+		engine_force = Input.get_axis("Break", "Gas") * ENGINE_POWER
 	else:
-		engine_force = 0
+		engine_force = sign(speed) * ENGINE_BRAKE
 	
 	if not grounded:
 		angular_velocity = Vector3(0,0,0)
