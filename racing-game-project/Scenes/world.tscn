@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://qse6u0exylp5"]
+[gd_scene load_steps=31 format=3 uid="uid://qse6u0exylp5"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1v0n1xk3c6gl" path="res://Models/Kenney-Models/roadStartPositions.obj" id="1_1cojt"]
 [ext_resource type="ArrayMesh" uid="uid://5q4raib2spkx" path="res://Models/Kenney-Models/roadStart.obj" id="2_yq1aw"]
@@ -26,6 +26,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cfpowofq8tp1g" path="res://Models/Kenney-Models/flagCheckers.obj" id="25_hmc15"]
 [ext_resource type="ArrayMesh" uid="uid://cajvjv45ti8a5" path="res://Models/Kenney-Models/rail.obj" id="26_pt3ps"]
 [ext_resource type="PackedScene" uid="uid://d3p71j6kb4y18" path="res://Prefabs/collider.tscn" id="27_dt0r1"]
+[ext_resource type="PackedScene" uid="uid://c03r37emq5mjb" path="res://Prefabs/player.tscn" id="27_hmc15"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_1cojt"]
 
@@ -1526,3 +1527,6 @@ transform = Transform3D(-2.4862585, -0.09885175, -8.742278e-08, -0.4652906, 0.52
 transform = Transform3D(-4.371139e-08, 0, 2.1, 0, 1, 0, -1, 0, -9.1793915e-08, -41.15454, 0, 17)
 mesh = ExtResource("14_r0ikl")
 skeleton = NodePath("../..")
+
+[node name="VehicleBody3D" parent="." instance=ExtResource("27_hmc15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2151375, 0.05504214, 0.15606928)

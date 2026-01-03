@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://2drmcfeovjib"]
+
+[ext_resource type="PackedScene" uid="uid://b22c3yukiijhw" path="res://Models/raceCarRed.glb" id="1_agq5l"]
+
+[node name="raceCarRed" instance=ExtResource("1_agq5l")]

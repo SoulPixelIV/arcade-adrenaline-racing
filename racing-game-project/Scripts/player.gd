@@ -5,10 +5,10 @@ extends VehicleBody3D
 @export var MAX_SPEED = 3.7
 @export var ENGINE_BRAKE = 65.0
 
-@onready var wheel_fl: VehicleWheel3D = $VehicleWheelFrontLeft
-@onready var wheel_fr: VehicleWheel3D = $VehicleWheelFrontRight
-@onready var wheel_bl: VehicleWheel3D = $VehicleWheelBackLeft
-@onready var wheel_br: VehicleWheel3D = $VehicleWheelBackRight
+@onready var wheel_fl: VehicleWheel3D = $VehicleWheel3DFL
+@onready var wheel_fr: VehicleWheel3D = $VehicleWheel3DFR
+@onready var wheel_bl: VehicleWheel3D = $VehicleWheel3DBL
+@onready var wheel_br: VehicleWheel3D = $VehicleWheel3DBR
 
 var grounded = false
 
