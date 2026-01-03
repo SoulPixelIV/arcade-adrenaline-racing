@@ -337,6 +337,7 @@ transform = Transform3D(-1, -1.7763568e-15, -8.742277e-08, -2.6774122e-08, 0.951
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29480845, 0.117541894, -0.4737443)
 use_as_traction = true
 wheel_radius = 0.14
+suspension_travel = 0.1
 
 [node name="wheelBackLeft" type="MeshInstance3D" parent="VehicleWheel3DBL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.089808434, 5.8107078e-05, 0.00030747056)
@@ -347,6 +348,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28454536, 0.11824763, -0.4737443)
 use_as_traction = true
 wheel_radius = 0.14
+suspension_travel = 0.1
 
 [node name="wheelBackRight" type="MeshInstance3D" parent="VehicleWheel3DBR"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07954535, -0.0006476268, 0.00030747056)
@@ -357,6 +359,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29480845, 0.118045315, 0.32721102)
 use_as_steering = true
 wheel_radius = 0.14
+suspension_travel = 0.1
 
 [node name="wheelFrontLeft" type="MeshInstance3D" parent="VehicleWheel3DFL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.089808434, -0.00044531375, 0.00051543117)
@@ -367,6 +370,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28454536, 0.11824763, 0.3274124)
 use_as_steering = true
 wheel_radius = 0.14
+suspension_travel = 0.1
 
 [node name="wheelFrontRight" type="MeshInstance3D" parent="VehicleWheel3DFR"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07954535, -0.0006476268, 0.00031405687)
