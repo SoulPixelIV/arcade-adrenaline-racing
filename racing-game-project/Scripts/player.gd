@@ -1,8 +1,8 @@
 extends VehicleBody3D
 
-@export var MAX_STEER = 0.4
-@export var ENGINE_POWER = 162
-@export var MAX_SPEED = 3.7
+@export var MAX_STEER = 0.35
+@export var ENGINE_POWER = 1600
+@export var MAX_SPEED = 11.5
 @export var ENGINE_BRAKE = 65.0
 
 @onready var wheel_fl: VehicleWheel3D = $VehicleWheel3DFL
@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 	#Clamp Max Speed
 	if speed > MAX_SPEED:
 		linear_velocity = linear_velocity.normalized() * MAX_SPEED
-	
-	print(grounded)
-	
+		
+	#Stop car from moving on its own
+	if input == 0:
+		brake = 2

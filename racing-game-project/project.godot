@@ -14,6 +14,12 @@ config/name="racing-game-project"
 run/main_scene="uid://qse6u0exylp5"
 config/features=PackedStringArray("4.5", "Forward Plus")
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+
 [file_customization]
 
 folder_colors={

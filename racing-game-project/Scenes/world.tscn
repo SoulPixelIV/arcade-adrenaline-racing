@@ -1776,28 +1776,29 @@ transform = Transform3D(0.78397524, 0, -0.6207921, 0, 1, 0, 0.6207921, 0, 0.7839
 mesh = ExtResource("26_pt3ps")
 skeleton = NodePath("../..")
 
-[node name="Collider" parent="." instance=ExtResource("27_dt0r1")]
+[node name="Collider" parent="Node3D" instance=ExtResource("27_dt0r1")]
 transform = Transform3D(0.54571956, 0, 0, 0, 0.16328357, 0.2415092, 0, -0.049693383, 0.79355586, -0.48974854, 0.025795847, 2.1674933)
-
-[node name="RoadRampLongCurvedWall" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.371139e-08, 0, 2.1, 0, 1, 0, -1, 0, -9.1793915e-08, -41.15454, 0, 17)
-mesh = ExtResource("14_r0ikl")
 skeleton = NodePath("../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="RoadRampLongCurvedWall"]
+[node name="RoadRampLongCurvedWall2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(-4.371139e-08, 0, 2.1, 0, 1, 0, -1, 0, -9.1793915e-08, -41.15454, 0, 17)
+mesh = ExtResource("14_r0ikl")
+skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RoadRampLongCurvedWall/StaticBody3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D/RoadRampLongCurvedWall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/RoadRampLongCurvedWall2/StaticBody3D"]
 transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_opbav")
 
-[node name="VehicleBody3D" parent="." instance=ExtResource("27_hmc15")]
-transform = Transform3D(0.0354888, 0, -0.24746828, 0, 0.25, 0, 0.24746828, 0, 0.0354888, -24.804726, 0.037402153, 17.44957)
-ENGINE_POWER = 500
-MAX_SPEED = 13.0
-
-[node name="Ramp2" type="MeshInstance3D" parent="."]
+[node name="Ramp3" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(-1, 1.5058918e-08, -8.61883e-08, 2.927912e-08, 0.9858793, -0.16745706, 8.244955e-08, -0.16745706, -0.9858793, -33.77533, 0, 3.0083895)
 mesh = ExtResource("17_ochwf")
+skeleton = NodePath("../..")
 
-[node name="Collider2" parent="." instance=ExtResource("27_dt0r1")]
+[node name="Collider2" parent="Node3D" instance=ExtResource("27_dt0r1")]
 transform = Transform3D(-0.54571956, 4.3443333e-09, -6.937486e-08, 0, 0.16328357, 0.24150914, 4.770832e-08, 0.04969338, -0.7935559, -33.500607, 0.025795847, 2.6201055)
+skeleton = NodePath("../..")
+
+[node name="VehicleBody3D" parent="Node3D" instance=ExtResource("27_hmc15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6403599, 0.031522155, 0.6265447)
