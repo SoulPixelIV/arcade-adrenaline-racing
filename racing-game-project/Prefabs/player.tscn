@@ -315,6 +315,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_h4e1r")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y6xdh"]
+size = Vector3(0.4852295, 1, 0.82214355)
 
 [node name="VehicleBody3D" type="VehicleBody3D"]
 script = ExtResource("1_y6xdh")
@@ -334,6 +335,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29480845, 0.117541894, -0.4
 use_as_traction = true
 wheel_roll_influence = 1.0
 wheel_radius = 0.14
+wheel_friction_slip = 5.0
 suspension_travel = 0.1
 
 [node name="wheelBackLeft" type="MeshInstance3D" parent="VehicleWheel3DBL"]
@@ -346,6 +348,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28454536, 0.11824763, -0.4
 use_as_traction = true
 wheel_roll_influence = 1.0
 wheel_radius = 0.14
+wheel_friction_slip = 5.0
 suspension_travel = 0.1
 
 [node name="wheelBackRight" type="MeshInstance3D" parent="VehicleWheel3DBR"]
@@ -358,6 +361,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.29480845, 0.118045315, 0.32
 use_as_steering = true
 wheel_roll_influence = 1.0
 wheel_radius = 0.14
+wheel_friction_slip = 5.0
 suspension_travel = 0.1
 
 [node name="wheelFrontLeft" type="MeshInstance3D" parent="VehicleWheel3DFL"]
@@ -370,6 +374,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.28454536, 0.11824763, 0.32
 use_as_steering = true
 wheel_roll_influence = 1.0
 wheel_radius = 0.14
+wheel_friction_slip = 5.0
 suspension_travel = 0.1
 
 [node name="wheelFrontRight" type="MeshInstance3D" parent="VehicleWheel3DFR"]
@@ -378,5 +383,5 @@ mesh = SubResource("ArrayMesh_2nftw")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.8, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0.10324231, 0)
+transform = Transform3D(0.8, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0.103, -0.089)
 shape = SubResource("BoxShape3D_y6xdh")

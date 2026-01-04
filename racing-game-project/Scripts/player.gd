@@ -24,11 +24,8 @@ func _physics_process(delta: float) -> void:
 		grounded = false
 	
 	#Steering
-	if grounded:
-		if sign(steerValue) != sign(steering):
-			steering = steerValue
-		else:
-			steering = move_toward(steering, steerValue, delta * 2.5)
+	if steerValue != 0:
+		steering = move_toward(steering, steerValue, delta * 10)
 	else:
 		steering = move_toward(steering, 0.0, delta * 5.0)
 	
