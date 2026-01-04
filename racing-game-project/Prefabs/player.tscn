@@ -259,10 +259,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07000001, 0, -5.6892633e-05
 mesh = SubResource("ArrayMesh_b30ri")
 skeleton = NodePath("")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 1.7763568e-15, -8.7422784e-08, -2.1634737e-08, 0.96889496, 0.24747255, 8.470349e-08, 0.24747255, -0.96889496, 0, 0.73088884, -1.3292196)
-current = true
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0009765625, 0.14567566, -0.055114746)
 shape = SubResource("BoxShape3D_5wxv7")
