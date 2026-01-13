@@ -8,6 +8,7 @@ albedo_color = Color(0.63708246, 0.0003803292, 0.6567648, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xt3na"]
 
 [node name="Collider" type="MeshInstance3D"]
+visible = false
 mesh = SubResource("BoxMesh_odjyd")
 surface_material_override/0 = SubResource("StandardMaterial3D_xpmlp")
 
