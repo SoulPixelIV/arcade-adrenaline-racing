@@ -35,8 +35,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		engine_force = sign(speed) * ENGINE_BRAKE
 	
-	if not grounded:
-		angular_velocity = Vector3(0,0,0)
+	#if not grounded:
+		#angular_velocity = Vector3(0,0,0)
 	
 	#Clamp Max Speed
 	if speed > MAX_SPEED:
