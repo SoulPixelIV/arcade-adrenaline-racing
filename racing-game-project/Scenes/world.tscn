@@ -4420,5 +4420,89 @@ transform = Transform3D(0.08082243, 0, -0.94160545, 0, 1.7035745, 0, 0.13982514,
 skeleton = NodePath("../..")
 
 [node name="Collider123" parent="." instance=ExtResource("27_dt0r1")]
-transform = Transform3D(0.08082243, 0, -0.94160545, 0, 1.7035745, 0, 0.13982514, 0, 0.5442719, -12.781776, -0.4560034, -9.828365)
+transform = Transform3D(0.13474065, 0, -0.5996162, 0, 1.7035745, 0, 0.08904096, 0, 0.90736586, -13.286135, -0.4560034, -9.828365)
+skeleton = NodePath("../..")
+
+[node name="Collider124" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(0.16150336, 0, 0, 0, 1.7035745, 0, 0, 0, 6.387248, -13.007777, -0.4560034, -12.095028)
+skeleton = NodePath("../..")
+
+[node name="Collider125" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(0.032297004, 0, -0.9839089, 0, 1.7035742, 0, 0.16079825, 0, 0.19762255, -12.58711, -0.4560034, -15.321456)
+skeleton = NodePath("../..")
+
+[node name="Collider126" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.028852055, 0, -0.9879089, 0, 1.7035742, 0, 0.16145195, 0, -0.17654264, -11.629459, -0.4560034, -15.331086)
+skeleton = NodePath("../..")
+
+[node name="Collider127" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(0.16150336, 0, 0, 0, 1.7035745, 0, 0, 0, 6.387248, -11.186275, -0.4560034, -12.095028)
+skeleton = NodePath("../..")
+
+[node name="Collider128" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.15054087, 0, -0.52306014, 0, 1.7035745, 0, 0.08866826, 0, -0.88805056, -7.4660583, -0.4560034, -12.725674)
+skeleton = NodePath("../..")
+
+[node name="Collider129" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.086473, 0, -0.8955524, 0, 1.7035749, 0, 0.15181252, 0, -0.5101098, -6.7926316, -0.4560034, -12.080107)
+skeleton = NodePath("../..")
+
+[node name="Collider130" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-7.636948e-09, 0, -5.6629076, 0, 1.7035749, 0, 0.17471302, 0, -2.4753356e-07, -3.5169668, -0.4560034, -11.788226)
+skeleton = NodePath("../..")
+
+[node name="Collider131" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.15054087, 0, -0.52306014, 0, 1.7035745, 0, 0.08866826, 0, -0.88805056, -10.683982, -0.4560034, -9.883186)
+skeleton = NodePath("../..")
+
+[node name="Collider132" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.16557187, 0, -0.32900625, 0, 1.7035749, 0, 0.055772558, 0, -0.9767195, -11.099386, -0.4560034, -10.783298)
+skeleton = NodePath("../..")
+
+[node name="Collider133" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.09908607, 0, -1.0656515, 0, 1.7035749, 0, 0.11600669, 0, -0.9102165, -10.107878, -0.4560034, -9.180501)
+skeleton = NodePath("../..")
+
+[node name="Collider134" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.07691958, 0, -1.2103035, 0, 1.7035751, 0, 0.13175347, 0, -0.7065924, -9.216655, -0.4560034, -8.52395)
+skeleton = NodePath("../..")
+
+[node name="Collider135" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.040614262, 0, -1.3508935, 0, 1.7035753, 0, 0.14705808, 0, -0.37308735, -8.350798, -0.4560034, -8.101709)
+skeleton = NodePath("../..")
+
+[node name="Collider136" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-7.636948e-09, 0, -5.6629076, 0, 1.7035749, 0, 0.17471302, 0, -2.4753356e-07, -6.52206, -0.4560034, -7.8985662)
+skeleton = NodePath("../..")
+
+[node name="Collider137" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.04059182, 0, -1.0479269, 0, 1.703575, 0, 0.13754685, 0, -0.30925637, -3.2551117, -0.4560034, -7.7516685)
+skeleton = NodePath("../..")
+
+[node name="Collider138" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.08490344, 0, -0.88055176, 0, 1.7035753, 0, 0.115577824, 0, -0.6468529, -2.3689413, -0.4560034, -7.3009467)
+skeleton = NodePath("../..")
+
+[node name="Collider139" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.13641633, 0, -0.1947771, 0, 1.7035756, 0, 0.021054989, 0, -1.261969, -1.8717784, -0.4560034, -6.387316)
+skeleton = NodePath("../..")
+
+[node name="Collider140" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.030580327, 0, -1.0674782, 0, 1.703575, 0, 0.14011307, 0, -0.23298189, -1.9142412, -0.4560034, -11.665132)
+skeleton = NodePath("../..")
+
+[node name="Collider141" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.065826714, 0, -0.97070825, 0, 1.7035753, 0, 0.12741141, 0, -0.50151324, -0.9367635, -0.4560034, -11.315125)
+skeleton = NodePath("../..")
+
+[node name="Collider142" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.09193163, 0, -0.8385892, 0, 1.7035755, 0, 0.11006997, 0, -0.70039856, -0.07252419, -0.4560034, -10.718274)
+skeleton = NodePath("../..")
+
+[node name="Collider143" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.12299064, 0, -0.5619331, 0, 1.703575, 0, 0.07375714, 0, -0.9370275, 0.51213413, -0.4560034, -10.039193)
+skeleton = NodePath("../..")
+
+[node name="Collider144" parent="." instance=ExtResource("27_dt0r1")]
+transform = Transform3D(-0.14341137, 0, 3.8878306e-07, 0, 1.703575, 0, -1.253742e-08, 0, -4.4471602, 0.8260897, -0.4560034, -7.602316)
 skeleton = NodePath("../..")
