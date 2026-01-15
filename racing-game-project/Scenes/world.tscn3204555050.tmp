@@ -4650,80 +4650,18 @@ skeleton = NodePath("../../..")
 environment = SubResource("Environment_dt0r1")
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("waypoints") instance=ExtResource("27_hmc15")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5729054, 0.031522274, 2.1240933)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5736222, 0.031522155, 2.128406)
 script = ExtResource("39_04jkj")
-MAX_STEER = 0.55
 ENGINE_POWER = 800
-MAX_SPEED = 7.0
-ENGINE_BRAKE = 14.0
-waypoints = [NodePath("../waypoint"), NodePath("../waypoint2"), NodePath("../waypoint3"), NodePath("../waypoint3"), NodePath("../waypoint4"), NodePath("../waypoint5"), NodePath("../waypoint6"), NodePath("../waypoint7"), NodePath("../waypoint8"), NodePath("../waypoint9"), NodePath("../waypoint10"), NodePath("../waypoint11"), NodePath("../waypoint12"), NodePath("../waypoint13"), NodePath("../waypoint14"), NodePath("../waypoint15"), NodePath("../waypoint16"), NodePath("../waypoint17"), NodePath("../waypoint18"), NodePath("../waypoint19"), NodePath("../waypoint20"), NodePath("../waypoint21"), NodePath("../waypoint22"), NodePath("../waypoint23")]
+MAX_SPEED = 2.0
+waypoints = [NodePath("../waypoint"), NodePath("../waypoint2"), NodePath("../waypoint3")]
 reach_distance = 3.0
 
 [node name="waypoint" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.39034733, 0.15652204, 9.244448)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.15071297, 0.15652204, 6.4132032)
 
 [node name="waypoint2" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.6287967, 0.15652204, 13.340863)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.9627571, 0.15652204, 9.467573)
 
 [node name="waypoint3" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.42892677, 0.15652204, 15.892931)
-
-[node name="waypoint4" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.64808196, 0.15652204, 16.913378)
-
-[node name="waypoint5" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.1509875, 0.15652192, 17.783558)
-
-[node name="waypoint6" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.1305063, 0.15652204, 18.387629)
-
-[node name="waypoint7" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -5.596985, 0.15652204, 18.498993)
-
-[node name="waypoint8" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -8.537821, 0.15652204, 18.491947)
-
-[node name="waypoint9" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -11.021789, 0.15652204, 17.521263)
-
-[node name="waypoint10" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -16.914396, 0.15652204, 17.514143)
-
-[node name="waypoint11" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -18.75571, 0.15652168, 18.438803)
-
-[node name="waypoint12" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -20.919552, 0.15652204, 17.493986)
-
-[node name="waypoint13" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -24.217094, 0.15652204, 17.522432)
-
-[node name="waypoint14" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -29.382519, 0.47750562, 17.380129)
-
-[node name="waypoint15" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -37.22746, 0.63420284, 17.358238)
-
-[node name="waypoint16" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -44.016327, 0.15652204, 17.64001)
-
-[node name="waypoint17" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -46.803986, 0.15652204, 17.552277)
-
-[node name="waypoint18" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -47.844864, 0.15652204, 18.221874)
-
-[node name="waypoint19" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -48.513542, 0.15652192, 19.935947)
-
-[node name="waypoint20" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -48.164093, 0.15652204, 21.199959)
-
-[node name="waypoint21" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -47.133858, 0.15652227, 22.129206)
-
-[node name="waypoint22" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -45.1133, 0.15652204, 22.587524)
-
-[node name="waypoint23" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -39.43299, 0.15652204, 22.35818)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.1536026, 0.15652204, 13.556749)

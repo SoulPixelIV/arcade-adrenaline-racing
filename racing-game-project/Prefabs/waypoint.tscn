@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn37woivj3p7t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_odjyd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpmlp"]
+albedo_color = Color(0.63529414, 0, 0, 1)
+
+[node name="waypoint" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_odjyd")
+surface_material_override/0 = SubResource("StandardMaterial3D_xpmlp")
