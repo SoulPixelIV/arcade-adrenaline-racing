@@ -6,6 +6,7 @@ extends VehicleBody3D
 @export var ENGINE_BRAKE = 65.0
 
 @export var waypoints: Array[Node3D]
+@export var slowdownZones: Array[Node3D]
 @export var reach_distance := 3.0
 
 @onready var wheel_fl: VehicleWheel3D = $VehicleWheel3DFL
@@ -14,6 +15,7 @@ extends VehicleBody3D
 @onready var wheel_br: VehicleWheel3D = $VehicleWheel3DBR
 
 var grounded = false
+var in_slowzone = false
 var current_wp := 0
 
 func _physics_process(delta: float) -> void:
@@ -28,10 +30,6 @@ func _physics_process(delta: float) -> void:
 	#Waypoint
 	var target = waypoints[current_wp].global_position
 	var distance_to_target = target - global_position
-	
-	#Engine Force
-	if distance_to_target.length() > 3 && speed < MAX_SPEED:
-		engine_force = ENGINE_POWER
 		
 	#Steering
 	var to_target = (target - global_position)
@@ -44,6 +42,25 @@ func _physics_process(delta: float) -> void:
 	
 	var steer_amount = -forward.cross(to_target).y
 	steering = move_toward(steering, steer_amount * MAX_STEER, delta * 5)
+	
+	#Slow Down
+	for zone in slowdownZones:
+		var area = zone.get_node_or_null("Area3D")
+		if area:
+			if area.get_overlapping_bodies().has(self):
+				in_slowzone = true
+				break
+			else:
+				in_slowzone = false
+				
+	if in_slowzone:
+		engine_force = ENGINE_POWER / 2
+		brake = ENGINE_BRAKE
+	else:
+		#Engine Force
+		if distance_to_target.length() > 3 && speed < MAX_SPEED:
+			engine_force = ENGINE_POWER
+		brake = 0
 	
 	#Switch Waypoint
 	if distance_to_target.length() < reach_distance:

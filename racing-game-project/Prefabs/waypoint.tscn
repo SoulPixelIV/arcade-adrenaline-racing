@@ -3,7 +3,8 @@
 [sub_resource type="BoxMesh" id="BoxMesh_odjyd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpmlp"]
-albedo_color = Color(0.63529414, 0, 0, 1)
+transparency = 1
+albedo_color = Color(0.63529414, 0, 0, 0.22352941)
 
 [node name="waypoint" type="MeshInstance3D"]
 mesh = SubResource("BoxMesh_odjyd")
