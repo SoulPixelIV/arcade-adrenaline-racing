@@ -4657,8 +4657,8 @@ MAX_STEER = 0.55
 ENGINE_POWER = 800
 MAX_SPEED = 7.0
 ENGINE_BRAKE = 10.0
-waypoints = [NodePath("../waypoint"), NodePath("../waypoint2"), NodePath("../waypoint3"), NodePath("../waypoint3"), NodePath("../waypoint4"), NodePath("../waypoint5"), NodePath("../waypoint6"), NodePath("../waypoint7"), NodePath("../waypoint8"), NodePath("../waypoint9"), NodePath("../waypoint10"), NodePath("../waypoint11"), NodePath("../waypoint12"), NodePath("../waypoint13"), NodePath("../waypoint14"), NodePath("../waypoint15"), NodePath("../waypoint16"), NodePath("../waypoint17"), NodePath("../waypoint18"), NodePath("../waypoint19"), NodePath("../waypoint20"), NodePath("../waypoint21"), NodePath("../waypoint22"), NodePath("../waypoint23")]
-slowdownZones = [NodePath("../slowdownZone"), NodePath("../slowdownZone2"), NodePath("../slowdownZone3"), NodePath("../slowdownZone4"), NodePath("../slowdownZone5")]
+waypoints = [NodePath("../waypoint"), NodePath("../waypoint2"), NodePath("../waypoint3"), NodePath("../waypoint3"), NodePath("../waypoint4"), NodePath("../waypoint5"), NodePath("../waypoint6"), NodePath("../waypoint7"), NodePath("../waypoint8"), NodePath("../waypoint9"), NodePath("../waypoint10"), NodePath("../waypoint11"), NodePath("../waypoint12"), NodePath("../waypoint13"), NodePath("../waypoint14"), NodePath("../waypoint15"), NodePath("../waypoint16"), NodePath("../waypoint17"), NodePath("../waypoint18"), NodePath("../waypoint19"), NodePath("../waypoint20"), NodePath("../waypoint21"), NodePath("../waypoint22"), NodePath("../waypoint23"), NodePath("../waypoint24"), NodePath("../waypoint25"), NodePath("../waypoint26"), NodePath("../waypoint27"), NodePath("../waypoint28"), NodePath("../waypoint29"), NodePath("../waypoint30"), NodePath("../waypoint31"), NodePath("../waypoint32"), NodePath("../waypoint33"), NodePath("../waypoint34"), NodePath("../waypoint35"), NodePath("../waypoint36"), NodePath("../waypoint37"), NodePath("../waypoint38"), NodePath("../waypoint39"), NodePath("../waypoint40"), NodePath("../waypoint41"), NodePath("../waypoint42"), NodePath("../waypoint43"), NodePath("../waypoint44"), NodePath("../waypoint45"), NodePath("../waypoint46"), NodePath("../waypoint47"), NodePath("../waypoint48"), NodePath("../waypoint49"), NodePath("../waypoint50"), NodePath("../waypoint51"), NodePath("../waypoint52"), NodePath("../waypoint53"), NodePath("../waypoint54"), NodePath("../waypoint55"), NodePath("../waypoint56"), NodePath("../waypoint57"), NodePath("../waypoint58"), NodePath("../waypoint59"), NodePath("../waypoint60"), NodePath("../waypoint61"), NodePath("../waypoint62"), NodePath("../waypoint63"), NodePath("../waypoint64"), NodePath("../waypoint65"), NodePath("../waypoint66"), NodePath("../waypoint67"), NodePath("../waypoint68"), NodePath("../waypoint69"), NodePath("../waypoint70"), NodePath("../waypoint71"), NodePath("../waypoint72"), NodePath("../waypoint73"), NodePath("../waypoint74"), NodePath("../waypoint75"), NodePath("../waypoint76"), NodePath("../waypoint77"), NodePath("../waypoint78")]
+slowdownZones = [NodePath("../slowdownZone"), NodePath("../slowdownZone2"), NodePath("../slowdownZone3"), NodePath("../slowdownZone4"), NodePath("../slowdownZone5"), NodePath("../slowdownZone6"), NodePath("../slowdownZone7"), NodePath("../slowdownZone8"), NodePath("../slowdownZone9"), NodePath("../slowdownZone10"), NodePath("../slowdownZone11"), NodePath("../slowdownZone12"), NodePath("../slowdownZone13"), NodePath("../slowdownZone14"), NodePath("../slowdownZone15"), NodePath("../slowdownZone16"), NodePath("../slowdownZone17")]
 reach_distance = 3.0
 
 [node name="waypoint" parent="." instance=ExtResource("40_lkcvt")]
@@ -4683,7 +4683,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.1305063, 0.156522
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -5.596985, 0.15652204, 18.498993)
 
 [node name="waypoint8" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -8.537821, 0.15652204, 18.491947)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -8.537821, 0.15652204, 18.264875)
 
 [node name="waypoint9" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -11.021789, 0.15652204, 17.521263)
@@ -4692,7 +4692,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -11.021789, 0.156522
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -16.914396, 0.15652204, 17.514143)
 
 [node name="waypoint11" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -18.960777, 0.15652168, 17.889515)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -18.960777, 0.15652168, 18.035097)
 
 [node name="waypoint12" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -20.919552, 0.15652204, 17.493986)
@@ -4710,19 +4710,19 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -37.22746, 0.6342028
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -44.016327, 0.15652204, 17.64001)
 
 [node name="waypoint17" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -46.803986, 0.15652204, 17.552277)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -46.306416, 0.15652204, 17.959772)
 
 [node name="waypoint18" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -47.844864, 0.15652204, 18.221874)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -47.426456, 0.15652204, 18.478392)
 
 [node name="waypoint19" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -48.513542, 0.15652192, 19.935947)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -48.12245, 0.15652192, 19.819582)
 
 [node name="waypoint20" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -48.164093, 0.15652204, 21.199959)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -48.006565, 0.15652204, 21.199959)
 
 [node name="waypoint21" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -47.133858, 0.15652227, 22.129206)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -47.133858, 0.15652227, 22.188467)
 
 [node name="waypoint22" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -45.1133, 0.15652204, 22.587524)
@@ -4731,16 +4731,217 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -45.1133, 0.15652204
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -39.43299, 0.15652204, 22.35818)
 
 [node name="slowdownZone" parent="." instance=ExtResource("41_atqvy")]
-transform = Transform3D(4.7393737, 0, 0, 0, 0.69229025, 0, 0, 0, 12.254103, -0.4705639, 0.15652215, 14.764396)
+transform = Transform3D(4.7393737, 0, 0, 0, 0.69229025, 0, 0, 0, 7.0930924, -0.4705639, 0.15652215, 13.506006)
 
 [node name="slowdownZone2" parent="." instance=ExtResource("41_atqvy")]
 transform = Transform3D(5.146672, 0, 0, 0, 0.48688436, 0, 0, 0, 1.7099808, -8.482335, 0.15652204, 18.4968)
 
 [node name="slowdownZone3" parent="." instance=ExtResource("41_atqvy")]
-transform = Transform3D(6.8799496, 0, 0, 0, 0.5845106, 0, 0, 0, 3.5404847, -17.404129, 0.15652168, 18.488737)
+transform = Transform3D(4.6979384, 0, 0, 0, 0.5845106, 0, 0, 0, 3.5404847, -17.37159, 0.15652168, 18.488737)
 
 [node name="slowdownZone4" parent="." instance=ExtResource("41_atqvy")]
-transform = Transform3D(5.5297585, 0, -3.4593747, 0, 1.0442172, 0, 2.4352257, 0, 7.8553324, -46.99272, 0.15652204, 19.800259)
+transform = Transform3D(8.691632, 0, -1.0766162, 0, 1.0442172, 0, 3.8276699, 0, 2.4447129, -45.5101, 0.15652204, 17.98809)
 
 [node name="slowdownZone5" parent="." instance=ExtResource("41_atqvy")]
-transform = Transform3D(11.860686, 0, 0, 0, 2.2098517, 0, 0, 0, 1.2409736, -40.839752, 0.15652204, 17.534927)
+transform = Transform3D(6.6571465, 0, 0, 0, 2.2098517, 0, 0, 0, 1.2409736, -38.009495, 0.15652204, 17.534927)
+
+[node name="waypoint24" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.865356, 0.15652204, 22.594667)
+
+[node name="waypoint25" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -35.555824, 0.15652227, 22.209095)
+
+[node name="waypoint26" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.717464, 0.15652204, 21.27737)
+
+[node name="waypoint27" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.533817, 0.15652204, 18.797077)
+
+[node name="waypoint28" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.341835, 0.15652204, 15.619405)
+
+[node name="waypoint29" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.416325, 0.15652204, 12.800012)
+
+[node name="waypoint30" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.448013, 0.15652204, 10.622528)
+
+[node name="waypoint31" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.63552, 0.1565224, 6.1428185)
+
+[node name="waypoint32" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.48397, 0.29465872, 2.565505)
+
+[node name="waypoint33" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.48402, 0.15652204, -1.6347412)
+
+[node name="waypoint34" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.484074, 0.15652204, -7.0881176)
+
+[node name="waypoint35" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.30569, 0.15652215, -9.127735)
+
+[node name="waypoint36" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.860363, 0.15652215, -9.995554)
+
+[node name="waypoint37" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.15915, 0.15652215, -10.437974)
+
+[node name="waypoint38" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -31.197216, 0.15652215, -10.528071)
+
+[node name="waypoint39" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -29.237064, 0.15652215, -10.830098)
+
+[node name="waypoint40" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.177818, 0.15652215, -11.680427)
+
+[node name="waypoint41" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.742466, 0.15652204, -13.29764)
+
+[node name="waypoint42" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.347347, 0.15652204, -16.439976)
+
+[node name="waypoint43" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.494999, 0.15652204, -17.800964)
+
+[node name="waypoint44" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.063444, 0.15652204, -18.559692)
+
+[node name="waypoint45" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -29.465862, 0.15652204, -19.262466)
+
+[node name="waypoint46" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -31.566948, 0.15652204, -19.26726)
+
+[node name="waypoint47" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.451256, 0.15652204, -19.459661)
+
+[node name="waypoint48" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.90876, 0.15652204, -19.172655)
+
+[node name="waypoint49" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.174618, 0.15652204, -18.04646)
+
+[node name="waypoint50" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.49552, 0.15652204, -16.76573)
+
+[node name="waypoint51" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.49736, 0.4450869, -14.76937)
+
+[node name="waypoint52" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.46749, 0.6346003, -12.615276)
+
+[node name="waypoint53" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -35.840023, 0.63460004, -11.343768)
+
+[node name="waypoint54" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.198338, 0.6346003, -10.511595)
+
+[node name="waypoint55" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.808338, 0.63500047, -10.493481)
+
+[node name="waypoint56" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -18.5272, 0.36017573, -10.594476)
+
+[node name="waypoint57" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -16.644587, 0.15652204, -10.497526)
+
+[node name="waypoint58" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -15.347174, 0.15652204, -10.67131)
+
+[node name="waypoint59" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.592369, 0.15652204, -11.578946)
+
+[node name="waypoint60" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.552935, 0.15652204, -14.1359825)
+
+[node name="waypoint61" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.578778, 0.15652204, -16.473433)
+
+[node name="waypoint62" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.137216, 0.15652204, -17.425175)
+
+[node name="waypoint63" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -12.610286, 0.15652204, -18.462912)
+
+[node name="waypoint64" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -10.750583, 0.15652204, -17.96062)
+
+[node name="waypoint65" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -9.779247, 0.15652204, -16.618814)
+
+[node name="waypoint66" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -9.51905, 0.15652204, -13.855431)
+
+[node name="waypoint67" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -9.213048, 0.15652204, -11.223583)
+
+[node name="waypoint68" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -8.647705, 0.15652204, -10.318271)
+
+[node name="waypoint69" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -7.651409, 0.15652204, -9.535661)
+
+[node name="waypoint70" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -6.110811, 0.15652168, -9.545084)
+
+[node name="waypoint71" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -3.9752293, 0.15652204, -9.692665)
+
+[node name="waypoint72" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.5436811, 0.15652204, -9.424523)
+
+[node name="waypoint73" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.9210644, 0.15652204, -9.161084)
+
+[node name="waypoint74" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.89868927, 0.15652204, -8.175395)
+
+[node name="waypoint75" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.4292698, 0.15652204, -6.7520466)
+
+[node name="waypoint76" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.5310631, 0.15652204, -4.6673355)
+
+[node name="waypoint77" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.52188873, 0.15652204, -1.1099997)
+
+[node name="waypoint78" parent="." instance=ExtResource("40_lkcvt")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.60666084, 0.15652204, 2.7390018)
+
+[node name="slowdownZone6" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(5.7790956, 0, 0, 0, 1.684128, 0, 0, 0, 1.3406086, -38.40009, 0.15652204, 22.35197)
+
+[node name="slowdownZone7" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(1.4239833, 0, 0, 0, 1.0142878, 0, 0, 0, 3.932055, -34.568893, 0.15652204, 13.91631)
+
+[node name="slowdownZone8" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(1.4578136, 0, 0, 0, 0.9186338, 0, 0, 0, 5.1443334, -33.58747, 0.15652204, -6.78074)
+
+[node name="slowdownZone9" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(1.8883128, 0, 0, 0, 0.44656387, 0, 0, 0, 1.2474992, -30.017496, 0.15652215, -10.524986)
+
+[node name="slowdownZone10" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(1.1453865, 0, 0, 0, -0.9493433, 0, 0, 0, 3.6061695, -27.460537, 0.15652192, -16.870012)
+
+[node name="slowdownZone11" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(3.8678868, 0, 0, 0, 1.0121598, 0, 0, 0, 1.6053373, -34.096344, 0.15652204, -19.445576)
+
+[node name="slowdownZone12" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(1.1577005, 0, 0, 0, 1.3113238, 0, 0, 0, 3.9577432, -36.54299, 0.63255453, -13.195564)
+
+[node name="slowdownZone13" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(6.319434, 0, 0, 0, 0.6437882, 0, 0, 0, 1.2033324, -23.701595, 0.635, -10.42939)
+
+[node name="slowdownZone14" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(4.284068, 0, 0, 0, 1.0714444, 0, 0, 0, 1.4775859, -17.13358, 0.22785063, -10.447514)
+
+[node name="slowdownZone15" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(3.8331234, 0, 0, 0, 0.9906842, 0, 0, 0, 5.7943583, -14.5114355, 0.15652204, -15.219222)
+
+[node name="slowdownZone16" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(3.244165, 0, 0, 0, 0.87458694, 0, 0, 0, 5.0061727, -8.97316, 0.15652204, -12.535902)
+
+[node name="slowdownZone17" parent="." instance=ExtResource("41_atqvy")]
+transform = Transform3D(4.987448, 0, 0, 0, 0.6092237, 0, 0, 0, 2.2213395, -3.0187283, 0.15652204, -9.555971)
