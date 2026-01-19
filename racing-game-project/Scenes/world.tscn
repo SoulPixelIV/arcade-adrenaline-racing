@@ -843,6 +843,7 @@ skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yq1aw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Node3D/Grass"]
+collision_mask = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Grass/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.024349555, 0)

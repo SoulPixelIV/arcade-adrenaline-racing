@@ -183,6 +183,8 @@ shadow_mesh = SubResource("ArrayMesh_m62uw")
 size = Vector3(0.328125, 0.19454956, 0.8897705)
 
 [node name="VehicleBody3D" type="VehicleBody3D"]
+collision_layer = 2
+collision_mask = 5
 mass = 500.0
 script = ExtResource("1_y6xdh")
 
