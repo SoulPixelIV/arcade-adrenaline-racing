@@ -58,6 +58,7 @@ Break={
 3d_physics/layer_1="Collider"
 3d_physics/layer_2="Player"
 3d_physics/layer_3="SlowdownZone"
+3d_physics/layer_4="Pickups"
 
 [rendering]
 

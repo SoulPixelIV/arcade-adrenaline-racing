@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjp1miyepsf4v"]
+[gd_scene load_steps=7 format=3 uid="uid://cjp1miyepsf4v"]
 
 [ext_resource type="PackedScene" uid="uid://f58twdkoc7ye" path="res://Models/jerrycan_low/jerrycan_low.fbx" id="1_sa7ry"]
 [ext_resource type="Script" uid="uid://b7fmkaogxdjyh" path="res://Scripts/gasAnim.gd" id="2_d4wx6"]
@@ -10,12 +10,22 @@ albedo_texture = ExtResource("2_g0lp2")
 normal_enabled = true
 normal_texture = ExtResource("3_d4wx6")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_px8t8"]
+
 [node name="jerrycan_low" instance=ExtResource("1_sa7ry")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
 script = ExtResource("2_d4wx6")
 
 [node name="jerrycan_geo_low" parent="jerrycan_grp_low" index="0"]
 surface_material_override/0 = SubResource("StandardMaterial3D_tq3q2")
+
+[node name="Area3D" type="Area3D" parent="jerrycan_grp_low/jerrycan_geo_low" index="0"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="jerrycan_grp_low/jerrycan_geo_low/Area3D" index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_px8t8")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
 transform = Transform3D(1.4285715, 0, 0, 0, -6.244484e-08, 1.4285715, 0, -1.4285715, -6.244484e-08, 0, 0, 0)

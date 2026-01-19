@@ -10,6 +10,10 @@ extends VehicleBody3D
 @onready var wheel_bl: VehicleWheel3D = $VehicleWheel3DBL
 @onready var wheel_br: VehicleWheel3D = $VehicleWheel3DBR
 
+@export var timer: Label
+@export var gas: Array[Node3D]
+@export var gasBig: Array[Node3D]
+
 var grounded = false
 
 func _physics_process(delta: float) -> void:
@@ -45,3 +49,24 @@ func _physics_process(delta: float) -> void:
 	#Stop car from moving on its own
 	if input == 0:
 		brake = 2
+		
+	#Picking up Gas
+	for gasPickup in gas:
+		var area = null
+		if is_instance_valid(gasPickup):
+			area = gasPickup.get_node_or_null("jerrycan_grp_low/jerrycan_geo_low/Area3D")
+		if area:
+			if area.get_overlapping_bodies().has(self):
+				timer.gameTime += 2
+				gasPickup.queue_free()
+				break
+				
+	for gasPickupBig in gasBig:
+		var area2 = null
+		if is_instance_valid(gasPickupBig):
+			area2 = gasPickupBig.get_node_or_null("jerrycan_grp_low/jerrycan_geo_low/Area3D")
+		if area2:
+			if area2.get_overlapping_bodies().has(self):
+				timer.gameTime += 10
+				gasPickupBig.queue_free()
+				

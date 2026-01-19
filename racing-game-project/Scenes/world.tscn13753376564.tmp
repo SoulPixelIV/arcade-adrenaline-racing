@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://qse6u0exylp5"]
+[gd_scene load_steps=63 format=3 uid="uid://qse6u0exylp5"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1v0n1xk3c6gl" path="res://Models/Kenney-Models/roadStartPositions.obj" id="1_1cojt"]
 [ext_resource type="ArrayMesh" uid="uid://5q4raib2spkx" path="res://Models/Kenney-Models/roadStart.obj" id="2_yq1aw"]
@@ -41,6 +41,7 @@
 [ext_resource type="Script" uid="uid://cdtce60xyl4j0" path="res://Scripts/enemy.gd" id="39_04jkj"]
 [ext_resource type="PackedScene" uid="uid://cn37woivj3p7t" path="res://Prefabs/waypoint.tscn" id="40_lkcvt"]
 [ext_resource type="PackedScene" uid="uid://dlnropbu6jrmt" path="res://Prefabs/slowdownZone.tscn" id="41_atqvy"]
+[ext_resource type="Texture2D" uid="uid://tc5edju3gn8u" path="res://Textures/gas-can.png" id="42_w5giw"]
 [ext_resource type="Script" uid="uid://b8f5wyeyvf5mw" path="res://Scripts/gameTimer.gd" id="43_jwdyn"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dt0r1"]
@@ -886,7 +887,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -14.9, 0.1, 19.300001)
 [node name="jerrycan_low14" parent="Node3D" instance=ExtResource("19_r74th")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -15.5, 0.1, 19.3)
 
-[node name="jerrycan_low15BIG" parent="Node3D" instance=ExtResource("21_yq1aw")]
+[node name="jerrycan_low15" parent="Node3D" instance=ExtResource("21_yq1aw")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -19, 0.1, 18.5)
 
 [node name="jerrycan_low16" parent="Node3D" instance=ExtResource("19_r74th")]
@@ -955,7 +956,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -47.9, 0.1, 22)
 [node name="jerrycan_low36" parent="Node3D" instance=ExtResource("19_r74th")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -47.4, 0.1, 22.3)
 
-[node name="jerrycan_low37BIG" parent="Node3D" instance=ExtResource("21_yq1aw")]
+[node name="jerrycan_low37" parent="Node3D" instance=ExtResource("21_yq1aw")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -46.6, 0.1, 20)
 
 [node name="jerrycan_low38" parent="Node3D" instance=ExtResource("19_r74th")]
@@ -982,7 +983,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -27.5, 0.1, -16.8)
 [node name="jerrycan_low45" parent="Node3D" instance=ExtResource("19_r74th")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -27.6, 0.1, -17.5)
 
-[node name="jerrycan_low46BIG" parent="Node3D" instance=ExtResource("21_yq1aw")]
+[node name="jerrycan_low46" parent="Node3D" instance=ExtResource("21_yq1aw")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -27.9, 0.1, -18.3)
 
 [node name="jerrycan_low47" parent="Node3D" instance=ExtResource("19_r74th")]
@@ -991,7 +992,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -36.5, 0.34999996, -15)
 [node name="jerrycan_low48" parent="Node3D" instance=ExtResource("19_r74th")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -36.5, 0.47265363, -14.3)
 
-[node name="jerrycan_low49BIG" parent="Node3D" instance=ExtResource("21_yq1aw")]
+[node name="jerrycan_low49" parent="Node3D" instance=ExtResource("21_yq1aw")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -36.5, 0.6, -13.6)
 
 [node name="jerrycan_low50" parent="Node3D" instance=ExtResource("19_r74th")]
@@ -1000,7 +1001,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -17.4, 0.1, -10.5)
 [node name="jerrycan_low51" parent="Node3D" instance=ExtResource("19_r74th")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -16.8, 0.1, -10.5)
 
-[node name="jerrycan_low52BIG" parent="Node3D" instance=ExtResource("21_yq1aw")]
+[node name="jerrycan_low52" parent="Node3D" instance=ExtResource("21_yq1aw")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -16.2, 0.1, -10.5)
 
 [node name="jerrycan_low53" parent="Node3D" instance=ExtResource("19_r74th")]
@@ -1021,7 +1022,7 @@ transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.1, -5)
 [node name="jerrycan_low58" parent="Node3D" instance=ExtResource("19_r74th")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.5, 0.1, -4.4)
 
-[node name="jerrycan_low59BIG" parent="Node3D" instance=ExtResource("21_yq1aw")]
+[node name="jerrycan_low59" parent="Node3D" instance=ExtResource("21_yq1aw")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.5, 0.1, -3.8)
 
 [node name="TreeSmall" type="MeshInstance3D" parent="Node3D"]
@@ -1415,7 +1416,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -29,
 mesh = ExtResource("26_pt3ps")
 skeleton = NodePath("../..")
 
-[node name="jerrycan_low60BIG" parent="Node3D" instance=ExtResource("21_yq1aw")]
+[node name="jerrycan_low60" parent="Node3D" instance=ExtResource("21_yq1aw")]
 transform = Transform3D(0.030069813, 0, -0.6993539, 0, 0.7, 0, 0.6993539, 0, 0.030069813, -12.095546, 0.1, -16.653526)
 
 [node name="Rail49" type="MeshInstance3D" parent="Node3D"]
@@ -1483,11 +1484,8 @@ skeleton = NodePath("../..")
 transform = Transform3D(-0.54571956, 4.3443333e-09, -6.937486e-08, 0, 0.16328357, 0.24150914, 4.770832e-08, 0.04969338, -0.7935559, -33.500607, 0.025795847, 2.6201055)
 skeleton = NodePath("../..")
 
-[node name="VehicleBody3D" parent="Node3D" node_paths=PackedStringArray("timer", "gas", "gasBig") instance=ExtResource("27_hmc15")]
+[node name="VehicleBody3D" parent="Node3D" instance=ExtResource("27_hmc15")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6403599, 0.031522155, 0.6265447)
-timer = NodePath("../../UI/TimeLeft")
-gas = [NodePath("../jerrycan_low"), NodePath("../jerrycan_low2"), NodePath("../jerrycan_low3"), NodePath("../jerrycan_low4"), NodePath("../jerrycan_low5"), NodePath("../jerrycan_low6"), NodePath("../jerrycan_low7"), NodePath("../jerrycan_low8"), NodePath("../jerrycan_low9"), NodePath("../jerrycan_low10"), NodePath("../jerrycan_low11"), NodePath("../jerrycan_low12"), NodePath("../jerrycan_low13"), NodePath("../jerrycan_low14"), NodePath("../jerrycan_low16"), NodePath("../jerrycan_low17"), NodePath("../jerrycan_low18"), NodePath("../jerrycan_low19"), NodePath("../jerrycan_low20"), NodePath("../jerrycan_low21"), NodePath("../jerrycan_low22"), NodePath("../jerrycan_low23"), NodePath("../jerrycan_low24"), NodePath("../jerrycan_low25"), NodePath("../jerrycan_low26"), NodePath("../jerrycan_low27"), NodePath("../jerrycan_low28"), NodePath("../jerrycan_low29"), NodePath("../jerrycan_low30"), NodePath("../jerrycan_low31"), NodePath("../jerrycan_low32"), NodePath("../jerrycan_low33"), NodePath("../jerrycan_low34"), NodePath("../jerrycan_low35"), NodePath("../jerrycan_low36"), NodePath("../jerrycan_low38"), NodePath("../jerrycan_low39"), NodePath("../jerrycan_low40"), NodePath("../jerrycan_low41"), NodePath("../jerrycan_low42"), NodePath("../jerrycan_low43"), NodePath("../jerrycan_low44"), NodePath("../jerrycan_low45"), NodePath("../jerrycan_low47"), NodePath("../jerrycan_low48"), NodePath("../jerrycan_low50"), NodePath("../jerrycan_low51"), NodePath("../jerrycan_low53"), NodePath("../jerrycan_low54"), NodePath("../jerrycan_low55"), NodePath("../jerrycan_low56"), NodePath("../jerrycan_low57"), NodePath("../jerrycan_low58")]
-gasBig = [NodePath("../jerrycan_low15BIG"), NodePath("../jerrycan_low37BIG"), NodePath("../jerrycan_low46BIG"), NodePath("../jerrycan_low49BIG"), NodePath("../jerrycan_low52BIG"), NodePath("../jerrycan_low59BIG"), NodePath("../jerrycan_low60BIG")]
 
 [node name="BillboardDoubleExclusive" type="MeshInstance3D" parent="Node3D"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -12.071873, -0.028082967, -14.432014)
@@ -5051,6 +5049,18 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.60666084, 0.15652
 skeleton = NodePath("../..")
 
 [node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GasCan" type="Sprite2D" parent="UI"]
+position = Vector2(83, 994)
+scale = Vector2(0.2109375, 0.2109375)
+texture = ExtResource("42_w5giw")
+
+[node name="ProgressBar" type="ProgressBar" parent="UI"]
+offset_left = 151.0
+offset_top = 982.0
+offset_right = 470.0
+offset_bottom = 1019.0
+value = 67.0
 
 [node name="TimeLeft" type="Label" parent="UI"]
 offset_left = 848.0
