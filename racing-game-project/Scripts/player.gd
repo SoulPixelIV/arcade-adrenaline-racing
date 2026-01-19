@@ -13,6 +13,7 @@ extends VehicleBody3D
 @export var timer: Label
 @export var gas: Array[Node3D]
 @export var gasBig: Array[Node3D]
+@export var lockzone: Node3D
 
 var grounded = false
 
@@ -39,9 +40,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		engine_force = sign(speed) * ENGINE_BRAKE
 	
-	#if not grounded:
-		#angular_velocity = Vector3(0,0,0)
-	
 	#Clamp Max Speed
 	if speed > MAX_SPEED:
 		linear_velocity = linear_velocity.normalized() * MAX_SPEED
@@ -49,6 +47,15 @@ func _physics_process(delta: float) -> void:
 	#Stop car from moving on its own
 	if input == 0:
 		brake = 2
+		
+	#Entering Lock Zone
+	var lockzoneArea = null
+	if is_instance_valid(lockzone):
+		lockzoneArea = lockzone.get_node_or_null("Area3D")
+	if lockzoneArea:
+		if lockzoneArea.get_overlapping_bodies().has(self):
+			angular_velocity = Vector3(0,0,0)
+				
 		
 	#Picking up Gas
 	for gasPickup in gas:

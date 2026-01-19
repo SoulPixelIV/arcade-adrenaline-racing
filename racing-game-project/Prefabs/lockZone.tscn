@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvxpdj8cxak32"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_odjyd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpmlp"]
+transparency = 1
+albedo_color = Color(0.21642649, 0.4947617, 0.67617196, 0.28627452)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_txtpd"]
+
+[node name="lockZone" type="MeshInstance3D"]
+visible = false
+mesh = SubResource("BoxMesh_odjyd")
+surface_material_override/0 = SubResource("StandardMaterial3D_xpmlp")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_txtpd")
