@@ -4782,22 +4782,22 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.484074, 0.156522
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.30569, 0.15652215, -9.127735)
 
 [node name="waypoint36" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.860363, 0.15652215, -9.995554)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.474747, 0.15652215, -10.2428055)
 
 [node name="waypoint37" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.15915, 0.15652215, -10.437974)
 
 [node name="waypoint38" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -31.197216, 0.15652215, -10.528071)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -31.808517, 0.15652215, -10.528071)
 
 [node name="waypoint39" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -29.237064, 0.15652215, -10.830098)
 
 [node name="waypoint40" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.177818, 0.15652215, -11.680427)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.784616, 0.15652215, -11.983753)
 
 [node name="waypoint41" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.742466, 0.15652204, -13.29764)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.667753, 0.15652204, -13.29764)
 
 [node name="waypoint42" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.347347, 0.15652204, -16.439976)
@@ -4818,7 +4818,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -31.566948, 0.156522
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.451256, 0.15652204, -19.459661)
 
 [node name="waypoint48" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.90876, 0.15652204, -19.172655)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -35.1406, 0.15652204, -19.172655)
 
 [node name="waypoint49" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.174618, 0.15652204, -18.04646)
@@ -4839,7 +4839,7 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -35.840023, 0.634600
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.198338, 0.6346003, -10.511595)
 
 [node name="waypoint55" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.808338, 0.63500047, -10.493481)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.808338, 0.63500047, -10.509522)
 
 [node name="waypoint56" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -18.5272, 0.36017573, -10.594476)
@@ -4848,10 +4848,10 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -18.5272, 0.36017573
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -16.644587, 0.15652204, -10.497526)
 
 [node name="waypoint58" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -15.347174, 0.15652204, -10.67131)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -15.671236, 0.15652204, -10.67131)
 
 [node name="waypoint59" parent="." instance=ExtResource("40_lkcvt")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.592369, 0.15652204, -11.578946)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.57021, 0.15652204, -11.578946)
 
 [node name="waypoint60" parent="." instance=ExtResource("40_lkcvt")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.552935, 0.15652204, -14.1359825)
@@ -4929,7 +4929,7 @@ transform = Transform3D(1.1453865, 0, 0, 0, -0.9493433, 0, 0, 0, 3.6061695, -27.
 transform = Transform3D(3.8678868, 0, 0, 0, 1.0121598, 0, 0, 0, 1.6053373, -34.096344, 0.15652204, -19.445576)
 
 [node name="slowdownZone12" parent="." instance=ExtResource("41_atqvy")]
-transform = Transform3D(1.1577005, 0, 0, 0, 1.3113238, 0, 0, 0, 3.9577432, -36.54299, 0.63255453, -13.195564)
+transform = Transform3D(1.1577005, 0, 0, 0, 1.3113238, 0, 0, 0, 1.6367307, -36.54299, 0.63255453, -14.604642)
 
 [node name="slowdownZone13" parent="." instance=ExtResource("41_atqvy")]
 transform = Transform3D(6.319434, 0, 0, 0, 0.6437882, 0, 0, 0, 1.2033324, -23.701595, 0.635, -10.42939)
@@ -4938,10 +4938,10 @@ transform = Transform3D(6.319434, 0, 0, 0, 0.6437882, 0, 0, 0, 1.2033324, -23.70
 transform = Transform3D(4.284068, 0, 0, 0, 1.0714444, 0, 0, 0, 1.4775859, -17.13358, 0.22785063, -10.447514)
 
 [node name="slowdownZone15" parent="." instance=ExtResource("41_atqvy")]
-transform = Transform3D(3.8331234, 0, 0, 0, 0.9906842, 0, 0, 0, 5.7943583, -14.5114355, 0.15652204, -15.219222)
+transform = Transform3D(3.8331234, 0, 0, 0, 0.9906842, 0, 0, 0, 2.5731122, -14.5114355, 0.15652204, -15.755772)
 
 [node name="slowdownZone16" parent="." instance=ExtResource("41_atqvy")]
-transform = Transform3D(3.244165, 0, 0, 0, 0.87458694, 0, 0, 0, 5.0061727, -8.97316, 0.15652204, -12.535902)
+transform = Transform3D(3.244165, 0, 0, 0, 0.87458694, 0, 0, 0, 3.0932806, -8.97316, 0.15652204, -12.783866)
 
 [node name="slowdownZone17" parent="." instance=ExtResource("41_atqvy")]
-transform = Transform3D(4.987448, 0, 0, 0, 0.6092237, 0, 0, 0, 2.2213395, -3.0187283, 0.15652204, -9.555971)
+transform = Transform3D(3.161479, 0, 0, 0, 0.6092237, 0, 0, 0, 2.2213395, -2.6632316, 0.15652204, -9.555971)
