@@ -5,15 +5,23 @@ extends VehicleBody3D
 @export var MAX_SPEED = 11.5
 @export var ENGINE_BRAKE = 65.0
 
+var gamePlace = 0
+var gameScore = 0
+var currCheckpoint = 0
+
 @onready var wheel_fl: VehicleWheel3D = $VehicleWheel3DFL
 @onready var wheel_fr: VehicleWheel3D = $VehicleWheel3DFR
 @onready var wheel_bl: VehicleWheel3D = $VehicleWheel3DBL
 @onready var wheel_br: VehicleWheel3D = $VehicleWheel3DBR
 
 @export var timer: Label
+@export var score: Label
+@export var place: Label
+@export var enemy: Node3D
 @export var gas: Array[Node3D]
 @export var gasBig: Array[Node3D]
 @export var lockzone: Node3D
+@export var checkpoints: Array[Node3D]
 
 var grounded = false
 
@@ -65,6 +73,7 @@ func _physics_process(delta: float) -> void:
 		if area:
 			if area.get_overlapping_bodies().has(self):
 				timer.gameTime += 2
+				gameScore += 2500
 				gasPickup.queue_free()
 				break
 				
@@ -75,5 +84,21 @@ func _physics_process(delta: float) -> void:
 		if area2:
 			if area2.get_overlapping_bodies().has(self):
 				timer.gameTime += 10
+				gameScore += 15000
 				gasPickupBig.queue_free()
 				
+	#Score
+	score.text = "Score: " + str(gameScore)
+	
+	#Place
+	place.text = str(gamePlace) + "/2"
+	
+	#Place
+	var distToCheckpoint = checkpoints[currCheckpoint].global_position - global_position
+	var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - enemy.global_position
+	
+	if distToCheckpoint < enemyDistToCheckpoint:
+		gamePlace = 1
+	else:
+		gamePlace = 2
+		
