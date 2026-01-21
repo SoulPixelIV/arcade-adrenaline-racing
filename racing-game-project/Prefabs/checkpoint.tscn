@@ -1,6 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2kp87o4kjxf"]
-
-[ext_resource type="Script" uid="uid://duapoi8jop6bo" path="res://Scripts/checkpoint.gd" id="1_ayo4p"]
+[gd_scene load_steps=4 format=3 uid="uid://d2kp87o4kjxf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_odjyd"]
 
@@ -11,9 +9,9 @@ albedo_color = Color(0.60175055, 0.43101984, 0.1416753, 0.28627452)
 [sub_resource type="BoxShape3D" id="BoxShape3D_txtpd"]
 
 [node name="checkpoint" type="MeshInstance3D"]
+visible = false
 mesh = SubResource("BoxMesh_odjyd")
 surface_material_override/0 = SubResource("StandardMaterial3D_xpmlp")
-script = ExtResource("1_ayo4p")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 4
