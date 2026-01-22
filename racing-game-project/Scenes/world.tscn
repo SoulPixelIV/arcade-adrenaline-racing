@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://qse6u0exylp5"]
+[gd_scene load_steps=67 format=3 uid="uid://qse6u0exylp5"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1v0n1xk3c6gl" path="res://Models/Kenney-Models/roadStartPositions.obj" id="1_1cojt"]
 [ext_resource type="ArrayMesh" uid="uid://5q4raib2spkx" path="res://Models/Kenney-Models/roadStart.obj" id="2_yq1aw"]
@@ -41,6 +41,7 @@
 [ext_resource type="Script" uid="uid://cdtce60xyl4j0" path="res://Scripts/enemy.gd" id="39_04jkj"]
 [ext_resource type="PackedScene" uid="uid://cn37woivj3p7t" path="res://Prefabs/waypoint.tscn" id="40_lkcvt"]
 [ext_resource type="PackedScene" uid="uid://dlnropbu6jrmt" path="res://Prefabs/slowdownZone.tscn" id="41_atqvy"]
+[ext_resource type="Script" uid="uid://b0ohgg26uvsuh" path="res://Scripts/minimap.gd" id="43_6mm6r"]
 [ext_resource type="Script" uid="uid://b8f5wyeyvf5mw" path="res://Scripts/gameTimer.gd" id="43_jwdyn"]
 [ext_resource type="PackedScene" uid="uid://cvxpdj8cxak32" path="res://Prefabs/lockZone.tscn" id="43_t6yt7"]
 [ext_resource type="Texture2D" uid="uid://tc5edju3gn8u" path="res://Textures/gas-can.png" id="44_t6yt7"]
@@ -104,6 +105,9 @@ sky_material = SubResource("PanoramaSkyMaterial_hmc15")
 [sub_resource type="Environment" id="Environment_dt0r1"]
 background_mode = 2
 sky = SubResource("Sky_hmc15")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_al5m0"]
+viewport_path = NodePath("UI/SubViewport")
 
 [node name="World" type="Node3D"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
@@ -5085,6 +5089,26 @@ offset_right = 515.0
 offset_bottom = 1048.0
 theme_override_font_sizes/font_size = 60
 text = "Score: 17000"
+
+[node name="SubViewport" type="SubViewport" parent="UI"]
+transparent_bg = true
+size = Vector2i(256, 256)
+
+[node name="MinimapCamera" type="Camera3D" parent="UI/SubViewport" node_paths=PackedStringArray("player")]
+transform = Transform3D(-0.9999999, 8.742277e-08, 3.821371e-15, 0, -4.3711385e-08, 1, 8.742277e-08, 0.9999999, 4.371139e-08, -2.5614395, 43.41096, 2.5061789)
+projection = 1
+size = 37.0
+script = ExtResource("43_6mm6r")
+player = NodePath("../../../Node3D/VehicleBody3D")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+
+[node name="Minimap" type="TextureRect" parent="UI/CanvasLayer"]
+offset_left = 1648.0
+offset_top = 16.0
+offset_right = 1904.0
+offset_bottom = 272.0
+texture = SubResource("ViewportTexture_al5m0")
 
 [node name="lockZone" parent="." instance=ExtResource("43_t6yt7")]
 transform = Transform3D(0.93597454, 0, 0, 0, 1.6254767, 0, 0, 0, 1.7773055, -33.49491, 0.15652215, 1.384214)

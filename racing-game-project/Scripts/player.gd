@@ -93,6 +93,9 @@ func _physics_process(delta: float) -> void:
 	#Place
 	place.text = str(gamePlace) + "/2"
 	
+	if currCheckpoint >= checkpoints.size():
+		return
+	
 	var distToCheckpoint = checkpoints[currCheckpoint].global_position - global_position
 	var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - enemy.global_position
 	if distToCheckpoint.length() < 3 || enemyDistToCheckpoint.length() < 3:
