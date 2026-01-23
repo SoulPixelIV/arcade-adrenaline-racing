@@ -119,12 +119,12 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "enemy", "gas", "gasBig", "lockzone", "checkpoints") instance=ExtResource("27_hmc15")]
+[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "enemies", "gas", "gasBig", "lockzone", "checkpoints") instance=ExtResource("27_hmc15")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32637048, 0, 0.16292945)
 timer = NodePath("../../UI/TimeLeft")
 score = NodePath("../../UI/Score")
 place = NodePath("../../UI/Place")
-enemy = NodePath("../../Enemy")
+enemies = [NodePath("../../Enemy"), NodePath("../../Enemy2"), NodePath("../../Enemy3")]
 gas = [NodePath("../jerrycan_low"), NodePath("../jerrycan_low2"), NodePath("../jerrycan_low3"), NodePath("../jerrycan_low4"), NodePath("../jerrycan_low5"), NodePath("../jerrycan_low6"), NodePath("../jerrycan_low7"), NodePath("../jerrycan_low8"), NodePath("../jerrycan_low9"), NodePath("../jerrycan_low10"), NodePath("../jerrycan_low11"), NodePath("../jerrycan_low12"), NodePath("../jerrycan_low13"), NodePath("../jerrycan_low14"), NodePath("../jerrycan_low16"), NodePath("../jerrycan_low17"), NodePath("../jerrycan_low18"), NodePath("../jerrycan_low19"), NodePath("../jerrycan_low20"), NodePath("../jerrycan_low21"), NodePath("../jerrycan_low22"), NodePath("../jerrycan_low23"), NodePath("../jerrycan_low24"), NodePath("../jerrycan_low25"), NodePath("../jerrycan_low26"), NodePath("../jerrycan_low27"), NodePath("../jerrycan_low28"), NodePath("../jerrycan_low29"), NodePath("../jerrycan_low30"), NodePath("../jerrycan_low31"), NodePath("../jerrycan_low32"), NodePath("../jerrycan_low33"), NodePath("../jerrycan_low34"), NodePath("../jerrycan_low35"), NodePath("../jerrycan_low36"), NodePath("../jerrycan_low38"), NodePath("../jerrycan_low39"), NodePath("../jerrycan_low40"), NodePath("../jerrycan_low41"), NodePath("../jerrycan_low42"), NodePath("../jerrycan_low43"), NodePath("../jerrycan_low44"), NodePath("../jerrycan_low45"), NodePath("../jerrycan_low47"), NodePath("../jerrycan_low48"), NodePath("../jerrycan_low50"), NodePath("../jerrycan_low51"), NodePath("../jerrycan_low53"), NodePath("../jerrycan_low54"), NodePath("../jerrycan_low55"), NodePath("../jerrycan_low56"), NodePath("../jerrycan_low57"), NodePath("../jerrycan_low58")]
 gasBig = [NodePath("../jerrycan_low15BIG"), NodePath("../jerrycan_low37BIG"), NodePath("../jerrycan_low46BIG"), NodePath("../jerrycan_low49BIG"), NodePath("../jerrycan_low52BIG"), NodePath("../jerrycan_low59BIG"), NodePath("../jerrycan_low60BIG")]
 lockzone = NodePath("../../lockZone")

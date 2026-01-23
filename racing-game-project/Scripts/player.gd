@@ -17,7 +17,7 @@ var currCheckpoint = 0
 @export var timer: Label
 @export var score: Label
 @export var place: Label
-@export var enemy: Node3D
+@export var enemies: Array[Node3D]
 @export var gas: Array[Node3D]
 @export var gasBig: Array[Node3D]
 @export var lockzone: Node3D
@@ -91,17 +91,24 @@ func _physics_process(delta: float) -> void:
 	score.text = "Score: " + str(gameScore)
 	
 	#Place
-	place.text = str(gamePlace) + "/2"
+	place.text = str(gamePlace) + "/4"
 	
 	if currCheckpoint >= checkpoints.size():
 		return
 	
 	var distToCheckpoint = checkpoints[currCheckpoint].global_position - global_position
-	var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - enemy.global_position
-	if distToCheckpoint.length() < 3 || enemyDistToCheckpoint.length() < 3:
-		currCheckpoint += 1
 	
-	if distToCheckpoint.length() <= enemyDistToCheckpoint.length():
-		gamePlace = 1
-	else:
-		gamePlace = 2
+	var better_enemies := 0
+	
+	for e in enemies:
+		if not is_instance_valid(e):
+			continue
+	
+		var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - e.global_position
+		if distToCheckpoint.length() < 3 || enemyDistToCheckpoint.length() < 3:
+			currCheckpoint += 1
+			
+		if enemyDistToCheckpoint.length() < distToCheckpoint.length():
+			better_enemies += 1
+	
+	gamePlace = better_enemies + 1
