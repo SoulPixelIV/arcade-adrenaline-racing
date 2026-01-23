@@ -106,7 +106,8 @@ func _physics_process(delta: float) -> void:
 	
 		var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - e.global_position
 		if distToCheckpoint.length() < 3 || enemyDistToCheckpoint.length() < 3:
-			currCheckpoint += 1
+			if currCheckpoint < checkpoints.size() - 1:
+				currCheckpoint += 1
 			
 		if enemyDistToCheckpoint.length() < distToCheckpoint.length():
 			better_enemies += 1
