@@ -7,5 +7,6 @@ transparency = 1
 albedo_color = Color(0.13327768, 0.3572252, 0.46791327, 0.22352941)
 
 [node name="waypoint" type="MeshInstance3D"]
+visible = false
 mesh = SubResource("BoxMesh_odjyd")
 surface_material_override/0 = SubResource("StandardMaterial3D_xpmlp")

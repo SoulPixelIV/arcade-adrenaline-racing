@@ -1,4 +1,4 @@
-[gd_scene load_steps=70 format=3 uid="uid://qse6u0exylp5"]
+[gd_scene load_steps=72 format=3 uid="uid://qse6u0exylp5"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1v0n1xk3c6gl" path="res://Models/Kenney-Models/roadStartPositions.obj" id="1_1cojt"]
 [ext_resource type="ArrayMesh" uid="uid://5q4raib2spkx" path="res://Models/Kenney-Models/roadStart.obj" id="2_yq1aw"]
@@ -49,6 +49,8 @@
 [ext_resource type="PackedScene" uid="uid://d2kp87o4kjxf" path="res://Prefabs/checkpoint.tscn" id="45_al5m0"]
 [ext_resource type="PackedScene" uid="uid://dllgo5v3ultli" path="res://Prefabs/enemy2.tscn" id="48_te07t"]
 [ext_resource type="PackedScene" uid="uid://drefxoy3ptv1v" path="res://Prefabs/waypoint2.tscn" id="49_b4e6k"]
+[ext_resource type="PackedScene" uid="uid://bbu28xmy522" path="res://Prefabs/enemy3.tscn" id="50_0sgyr"]
+[ext_resource type="PackedScene" uid="uid://dubqaafx1s076" path="res://Prefabs/waypoint3.tscn" id="50_l33cg"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dt0r1"]
 data = PackedVector3Array(-0.9183, 0.5, 0, -0.9183, 0.5, 1, -1, 0.5, 0, -1, 0.5, 1, -1, 0.5, 0, -0.9183, 0.5, 1, 0, 0.5, 0, 0, 0.5, 1, -0.0817, 0.5, 0, -0.0817, 0.5, 1, -0.0817, 0.5, 0, 0, 0.5, 1, 0, 0.39339998, 1, -1, 0.39339998, 1, 0, 0.5, 1, -1, 0.5, 1, 0, 0.5, 1, -1, 0.39339998, 1, -0.0817, 0.5, 1, 0, 0.5, 1, -1, 0.5, 1, -0.9183, 0.5, 1, -0.0817, 0.5, 1, -1, 0.5, 1, -0.9183, 0.5, 1, -0.1549, 0.51, 1, -0.0817, 0.5, 1, -0.0817, 0.52, 1, -0.0817, 0.5, 1, -0.1549, 0.51, 1, -0.1549, 0.52, 1, -0.0817, 0.52, 1, -0.1549, 0.51, 1, -0.1549, 0.51, 1, -0.9183, 0.5, 1, -0.8451, 0.51, 1, -0.9183, 0.52, 1, -0.8451, 0.51, 1, -0.9183, 0.5, 1, -0.8451, 0.52, 1, -0.8451, 0.51, 1, -0.9183, 0.52, 1, 0, 0.5, 0, 0, 0.39339998, 0, 0, 0.5, 1, 0, 0.39339998, 1, 0, 0.5, 1, 0, 0.39339998, 0, -1, 0.39339998, 0, -0.95, 0.39339998, 0, -1, 0.5, 0, -0.95, 0, 0, -0.049999997, 0, 0, -0.95, 0.39339998, 0, -0.049999997, 0.39339998, 0, -0.95, 0.39339998, 0, -0.049999997, 0, 0, -0.049999997, 0.39339998, 0, -1, 0.5, 0, -0.95, 0.39339998, 0, 0, 0.39339998, 0, -1, 0.5, 0, -0.049999997, 0.39339998, 0, 0, 0.5, 0, -1, 0.5, 0, 0, 0.39339998, 0, -0.9183, 0.5, 0, -1, 0.5, 0, 0, 0.5, 0, -0.0817, 0.5, 0, -0.9183, 0.5, 0, 0, 0.5, 0, -0.0817, 0.5, 0, -0.8451, 0.51, 0, -0.9183, 0.5, 0, -0.9183, 0.52, 0, -0.9183, 0.5, 0, -0.8451, 0.51, 0, -0.8451, 0.52, 0, -0.9183, 0.52, 0, -0.8451, 0.51, 0, -0.8451, 0.51, 0, -0.0817, 0.5, 0, -0.1549, 0.51, 0, -0.0817, 0.52, 0, -0.1549, 0.51, 0, -0.0817, 0.5, 0, -0.1549, 0.52, 0, -0.1549, 0.51, 0, -0.0817, 0.52, 0, -1, 0.39339998, 0, -1, 0.5, 0, -1, 0.39339998, 1, -1, 0.5, 1, -1, 0.39339998, 1, -1, 0.5, 0, -0.049999997, 0, 0.1183, -0.049999997, 0, 0, -0.95, 0, 0.1183, -0.95, 0, 0, -0.95, 0, 0.1183, -0.049999997, 0, 0, -0.049999997, 0, 0.1183, -0.95, 0, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.95, 0, 0.1183, -0.049999997, 0.39339998, 0, -0.049999997, 0, 0, -0.049999997, 0.39339998, 0.1183, -0.049999997, 0, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.049999997, 0, 0, 0, 0.39339998, 0, -0.049999997, 0.39339998, 0.1183, 0, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, 0, 0.39339998, 0, -0.049999997, 0.39339998, 0, -1, 0.39339998, 1, 0, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0.1183, -1, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0, -1, 0.39339998, 1, -0.95, 0.39339998, 0.1183, -1, 0.39339998, 0, -1, 0.39339998, 1, -0.95, 0.39339998, 0, -0.95, 0, 0, -0.95, 0.39339998, 0, -0.95, 0, 0.1183, -0.95, 0.39339998, 0.1183, -0.95, 0, 0.1183, -0.95, 0.39339998, 0, -0.8451, 0.52, 0, -0.8451, 0.52, 1, -0.9183, 0.52, 0, -0.9183, 0.52, 1, -0.9183, 0.52, 0, -0.8451, 0.52, 1, -0.8451, 0.52, 0, -0.8451, 0.51, 0, -0.8451, 0.52, 1, -0.8451, 0.51, 1, -0.8451, 0.52, 1, -0.8451, 0.51, 0, -0.9183, 0.5, 0, -0.9183, 0.52, 0, -0.9183, 0.5, 1, -0.9183, 0.52, 1, -0.9183, 0.5, 1, -0.9183, 0.52, 0, -0.0817, 0.52, 0, -0.0817, 0.5, 0, -0.0817, 0.52, 1, -0.0817, 0.5, 1, -0.0817, 0.52, 1, -0.0817, 0.5, 0, -0.0817, 0.52, 0, -0.0817, 0.52, 1, -0.1549, 0.52, 0, -0.1549, 0.52, 1, -0.1549, 0.52, 0, -0.0817, 0.52, 1, -0.1549, 0.51, 0, -0.1549, 0.52, 0, -0.1549, 0.51, 1, -0.1549, 0.52, 1, -0.1549, 0.51, 1, -0.1549, 0.52, 0, -0.1549, 0.51, 0, -0.1549, 0.51, 1, -0.8451, 0.51, 0, -0.8451, 0.51, 1, -0.8451, 0.51, 0, -0.1549, 0.51, 1, -0.9183, 0.5, 0, -0.9183, 0.5, 1, -1, 0.5, 0, -1, 0.5, 1, -1, 0.5, 0, -0.9183, 0.5, 1, 0, 0.5, 0, 0, 0.5, 1, -0.0817, 0.5, 0, -0.0817, 0.5, 1, -0.0817, 0.5, 0, 0, 0.5, 1, 0, 0.39339998, 1, -1, 0.39339998, 1, 0, 0.5, 1, -1, 0.5, 1, 0, 0.5, 1, -1, 0.39339998, 1, -0.0817, 0.5, 1, 0, 0.5, 1, -1, 0.5, 1, -0.9183, 0.5, 1, -0.0817, 0.5, 1, -1, 0.5, 1, -0.9183, 0.5, 1, -0.1549, 0.51, 1, -0.0817, 0.5, 1, -0.0817, 0.52, 1, -0.0817, 0.5, 1, -0.1549, 0.51, 1, -0.1549, 0.52, 1, -0.0817, 0.52, 1, -0.1549, 0.51, 1, -0.1549, 0.51, 1, -0.9183, 0.5, 1, -0.8451, 0.51, 1, -0.9183, 0.52, 1, -0.8451, 0.51, 1, -0.9183, 0.5, 1, -0.8451, 0.52, 1, -0.8451, 0.51, 1, -0.9183, 0.52, 1, 0, 0.5, 0, 0, 0.39339998, 0, 0, 0.5, 1, 0, 0.39339998, 1, 0, 0.5, 1, 0, 0.39339998, 0, -1, 0.39339998, 0, -0.95, 0.39339998, 0, -1, 0.5, 0, -0.95, 0, 0, -0.049999997, 0, 0, -0.95, 0.39339998, 0, -0.049999997, 0.39339998, 0, -0.95, 0.39339998, 0, -0.049999997, 0, 0, -0.049999997, 0.39339998, 0, -1, 0.5, 0, -0.95, 0.39339998, 0, 0, 0.39339998, 0, -1, 0.5, 0, -0.049999997, 0.39339998, 0, 0, 0.5, 0, -1, 0.5, 0, 0, 0.39339998, 0, -0.9183, 0.5, 0, -1, 0.5, 0, 0, 0.5, 0, -0.0817, 0.5, 0, -0.9183, 0.5, 0, 0, 0.5, 0, -0.0817, 0.5, 0, -0.8451, 0.51, 0, -0.9183, 0.5, 0, -0.9183, 0.52, 0, -0.9183, 0.5, 0, -0.8451, 0.51, 0, -0.8451, 0.52, 0, -0.9183, 0.52, 0, -0.8451, 0.51, 0, -0.8451, 0.51, 0, -0.0817, 0.5, 0, -0.1549, 0.51, 0, -0.0817, 0.52, 0, -0.1549, 0.51, 0, -0.0817, 0.5, 0, -0.1549, 0.52, 0, -0.1549, 0.51, 0, -0.0817, 0.52, 0, -1, 0.39339998, 0, -1, 0.5, 0, -1, 0.39339998, 1, -1, 0.5, 1, -1, 0.39339998, 1, -1, 0.5, 0, -0.049999997, 0, 0.1183, -0.049999997, 0, 0, -0.95, 0, 0.1183, -0.95, 0, 0, -0.95, 0, 0.1183, -0.049999997, 0, 0, -0.049999997, 0, 0.1183, -0.95, 0, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.95, 0, 0.1183, -0.049999997, 0.39339998, 0, -0.049999997, 0, 0, -0.049999997, 0.39339998, 0.1183, -0.049999997, 0, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.049999997, 0, 0, 0, 0.39339998, 0, -0.049999997, 0.39339998, 0.1183, 0, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, 0, 0.39339998, 0, -0.049999997, 0.39339998, 0, -1, 0.39339998, 1, 0, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0.1183, -1, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0, -1, 0.39339998, 1, -0.95, 0.39339998, 0.1183, -1, 0.39339998, 0, -1, 0.39339998, 1, -0.95, 0.39339998, 0, -0.95, 0, 0, -0.95, 0.39339998, 0, -0.95, 0, 0.1183, -0.95, 0.39339998, 0.1183, -0.95, 0, 0.1183, -0.95, 0.39339998, 0, -0.8451, 0.52, 0, -0.8451, 0.52, 1, -0.9183, 0.52, 0, -0.9183, 0.52, 1, -0.9183, 0.52, 0, -0.8451, 0.52, 1, -0.8451, 0.52, 0, -0.8451, 0.51, 0, -0.8451, 0.52, 1, -0.8451, 0.51, 1, -0.8451, 0.52, 1, -0.8451, 0.51, 0, -0.9183, 0.5, 0, -0.9183, 0.52, 0, -0.9183, 0.5, 1, -0.9183, 0.52, 1, -0.9183, 0.5, 1, -0.9183, 0.52, 0, -0.0817, 0.52, 0, -0.0817, 0.5, 0, -0.0817, 0.52, 1, -0.0817, 0.5, 1, -0.0817, 0.52, 1, -0.0817, 0.5, 0, -0.0817, 0.52, 0, -0.0817, 0.52, 1, -0.1549, 0.52, 0, -0.1549, 0.52, 1, -0.1549, 0.52, 0, -0.0817, 0.52, 1, -0.1549, 0.51, 0, -0.1549, 0.52, 0, -0.1549, 0.51, 1, -0.1549, 0.52, 1, -0.1549, 0.51, 1, -0.1549, 0.52, 0, -0.1549, 0.51, 0, -0.1549, 0.51, 1, -0.8451, 0.51, 0, -0.8451, 0.51, 1, -0.8451, 0.51, 0, -0.1549, 0.51, 1)
@@ -5319,11 +5321,11 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.18525, 0.6346001
 skeleton = NodePath("../..")
 
 [node name="waypoint15" parent="Waypoints2" instance=ExtResource("49_b4e6k")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -35.02253, 0.6345999, -10.693675)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -35.02253, 0.6345999, -10.722237)
 skeleton = NodePath("../..")
 
 [node name="waypoint16" parent="Waypoints2" instance=ExtResource("49_b4e6k")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.458633, 0.6350002, -10.490009)
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.458633, 0.6350002, -10.512278)
 skeleton = NodePath("../..")
 
 [node name="waypoint17" parent="Waypoints2" instance=ExtResource("49_b4e6k")]
@@ -5409,3 +5411,260 @@ skeleton = NodePath("../..")
 [node name="waypoint37" parent="Waypoints2" instance=ExtResource("49_b4e6k")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.3287716, 0.15652204, 2.787715)
 skeleton = NodePath("../..")
+
+[node name="Enemy3" parent="." node_paths=PackedStringArray("waypoints", "slowdownZones") instance=ExtResource("50_0sgyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6833937, 0.031522036, 1.6744936)
+script = ExtResource("39_04jkj")
+MAX_STEER = 0.6
+ENGINE_POWER = 870
+MAX_SPEED = 7.7
+ENGINE_BRAKE = 11.5
+waypoints = [NodePath("../Waypoints3/waypoint"), NodePath("../Waypoints3/waypoint2"), NodePath("../Waypoints3/waypoint3"), NodePath("../Waypoints3/waypoint4"), NodePath("../Waypoints3/waypoint5"), NodePath("../Waypoints3/waypoint6"), NodePath("../Waypoints3/waypoint7"), NodePath("../Waypoints3/waypoint8"), NodePath("../Waypoints3/waypoint9"), NodePath("../Waypoints3/waypoint10"), NodePath("../Waypoints3/waypoint11"), NodePath("../Waypoints3/waypoint12"), NodePath("../Waypoints3/waypoint13"), NodePath("../Waypoints3/waypoint14"), NodePath("../Waypoints3/waypoint15"), NodePath("../Waypoints3/waypoint16"), NodePath("../Waypoints3/waypoint17"), NodePath("../Waypoints3/waypoint18"), NodePath("../Waypoints3/waypoint19"), NodePath("../Waypoints3/waypoint20"), NodePath("../Waypoints3/waypoint21"), NodePath("../Waypoints3/waypoint22"), NodePath("../Waypoints3/waypoint23"), NodePath("../Waypoints3/waypoint24"), NodePath("../Waypoints3/waypoint25"), NodePath("../Waypoints3/waypoint26"), NodePath("../Waypoints3/waypoint27"), NodePath("../Waypoints3/waypoint28"), NodePath("../Waypoints3/waypoint29"), NodePath("../Waypoints3/waypoint30"), NodePath("../Waypoints3/waypoint31"), NodePath("../Waypoints3/waypoint32"), NodePath("../Waypoints3/waypoint33"), NodePath("../Waypoints3/waypoint34"), NodePath("../Waypoints3/waypoint35"), NodePath("../Waypoints3/waypoint36"), NodePath("../Waypoints3/waypoint37"), NodePath("../Waypoints3/waypoint38"), NodePath("../Waypoints3/waypoint39"), NodePath("../Waypoints3/waypoint40"), NodePath("../Waypoints3/waypoint41"), NodePath("../Waypoints3/waypoint42"), NodePath("../Waypoints3/waypoint43"), NodePath("../Waypoints3/waypoint59"), NodePath("../Waypoints3/waypoint60"), NodePath("../Waypoints3/waypoint61"), NodePath("../Waypoints3/waypoint62"), NodePath("../Waypoints3/waypoint63"), NodePath("../Waypoints3/waypoint64"), NodePath("../Waypoints3/waypoint65"), NodePath("../Waypoints3/waypoint66"), NodePath("../Waypoints3/waypoint67"), NodePath("../Waypoints3/waypoint68"), NodePath("../Waypoints3/waypoint69"), NodePath("../Waypoints3/waypoint70"), NodePath("../Waypoints3/waypoint71"), NodePath("../Waypoints3/waypoint72"), NodePath("../Waypoints3/waypoint73"), NodePath("../Waypoints3/waypoint74"), NodePath("../Waypoints3/waypoint75"), NodePath("../Waypoints3/waypoint76")]
+slowdownZones = [NodePath("../SlowdownZones/slowdownZone"), NodePath("../SlowdownZones/slowdownZone2"), NodePath("../SlowdownZones/slowdownZone3"), NodePath("../SlowdownZones/slowdownZone4"), NodePath("../SlowdownZones/slowdownZone5"), NodePath("../SlowdownZones/slowdownZone6"), NodePath("../SlowdownZones/slowdownZone7"), NodePath("../SlowdownZones/slowdownZone8"), NodePath("../SlowdownZones/slowdownZone9"), NodePath("../SlowdownZones/slowdownZone10"), NodePath("../SlowdownZones/slowdownZone11"), NodePath("../SlowdownZones/slowdownZone12"), NodePath("../SlowdownZones/slowdownZone13"), NodePath("../SlowdownZones/slowdownZone14"), NodePath("../SlowdownZones/slowdownZone15"), NodePath("../SlowdownZones/slowdownZone16"), NodePath("../SlowdownZones/slowdownZone17"), NodePath("../SlowdownZones/slowdownZone18")]
+reach_distance = 3.0
+
+[node name="Waypoints3" type="Node3D" parent="."]
+
+[node name="waypoint" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.43566895, 0.15652204, 9.647277)
+skeleton = NodePath("../..")
+
+[node name="waypoint2" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.4244461, 0.15652204, 13.407501)
+skeleton = NodePath("../..")
+
+[node name="waypoint3" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.53014755, 0.15652204, 15.91781)
+skeleton = NodePath("../..")
+
+[node name="waypoint4" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.8700218, 0.15652204, 17.21574)
+skeleton = NodePath("../..")
+
+[node name="waypoint5" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -1.7993298, 0.15652204, 18.169449)
+skeleton = NodePath("../..")
+
+[node name="waypoint6" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.9362555, 0.15652204, 18.46966)
+skeleton = NodePath("../..")
+
+[node name="waypoint7" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -5.861743, 0.15652204, 18.528868)
+skeleton = NodePath("../..")
+
+[node name="waypoint8" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -8.297429, 0.15652204, 18.791882)
+skeleton = NodePath("../..")
+
+[node name="waypoint9" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -10.577385, 0.15652204, 19.582212)
+skeleton = NodePath("../..")
+
+[node name="waypoint10" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -13.2444105, 0.15652204, 19.531147)
+skeleton = NodePath("../..")
+
+[node name="waypoint11" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -16.78626, 0.15652204, 19.517002)
+skeleton = NodePath("../..")
+
+[node name="waypoint12" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -18.900753, 0.15652204, 19.00391)
+skeleton = NodePath("../..")
+
+[node name="waypoint13" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -22.242622, 0.15652204, 19.657993)
+skeleton = NodePath("../..")
+
+[node name="waypoint14" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -26.14975, 0.15652204, 19.549736)
+skeleton = NodePath("../..")
+
+[node name="waypoint15" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -29.468899, 0.15652204, 19.571335)
+skeleton = NodePath("../..")
+
+[node name="waypoint16" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -30.898668, 0.15652204, 19.099062)
+skeleton = NodePath("../..")
+
+[node name="waypoint17" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -31.7521, 0.15652204, 18.644936)
+skeleton = NodePath("../..")
+
+[node name="waypoint18" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.529457, 0.15652215, 17.499912)
+skeleton = NodePath("../..")
+
+[node name="waypoint19" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.68572, 0.15652204, 14.191349)
+skeleton = NodePath("../..")
+
+[node name="waypoint20" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.49397, 0.15652204, 11.1777315)
+skeleton = NodePath("../..")
+
+[node name="waypoint21" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.57321, 0.15652204, 7.6957316)
+skeleton = NodePath("../..")
+
+[node name="waypoint22" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.59227, 0.15652204, 4.306553)
+skeleton = NodePath("../..")
+
+[node name="waypoint23" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.90621, 0.15652204, 0.07772213)
+skeleton = NodePath("../..")
+
+[node name="waypoint24" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.533283, 0.15652204, -2.9419343)
+skeleton = NodePath("../..")
+
+[node name="waypoint25" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.59382, 0.15652215, -6.8125086)
+skeleton = NodePath("../..")
+
+[node name="waypoint26" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.482628, 0.15652215, -9.093154)
+skeleton = NodePath("../..")
+
+[node name="waypoint27" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -32.74522, 0.15652215, -10.280027)
+skeleton = NodePath("../..")
+
+[node name="waypoint28" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -31.211227, 0.15652215, -10.57737)
+skeleton = NodePath("../..")
+
+[node name="waypoint29" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -29.308937, 0.15652215, -10.660676)
+skeleton = NodePath("../..")
+
+[node name="waypoint30" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.199482, 0.15652215, -11.270923)
+skeleton = NodePath("../..")
+
+[node name="waypoint31" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.566853, 0.15652204, -12.848331)
+skeleton = NodePath("../..")
+
+[node name="waypoint32" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.511024, 0.15652204, -15.7631035)
+skeleton = NodePath("../..")
+
+[node name="waypoint33" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -27.6944, 0.15652204, -17.69648)
+skeleton = NodePath("../..")
+
+[node name="waypoint34" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.31533, 0.15652204, -18.721497)
+skeleton = NodePath("../..")
+
+[node name="waypoint35" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -30.172438, 0.15652204, -19.465952)
+skeleton = NodePath("../..")
+
+[node name="waypoint36" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -33.00704, 0.15652204, -19.42302)
+skeleton = NodePath("../..")
+
+[node name="waypoint37" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.3344, 0.15652192, -19.211058)
+skeleton = NodePath("../..")
+
+[node name="waypoint38" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -35.625546, 0.15652204, -18.54639)
+skeleton = NodePath("../..")
+
+[node name="waypoint39" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.45531, 0.15652204, -16.555294)
+skeleton = NodePath("../..")
+
+[node name="waypoint40" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.485363, 0.6059546, -13.661493)
+skeleton = NodePath("../..")
+
+[node name="waypoint41" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -36.223125, 0.63460004, -12.252095)
+skeleton = NodePath("../..")
+
+[node name="waypoint42" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -35.517185, 0.63460004, -11.116596)
+skeleton = NodePath("../..")
+
+[node name="waypoint43" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -34.54244, 0.6345999, -10.782787)
+skeleton = NodePath("../..")
+
+[node name="waypoint59" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -28.392996, 0.6350001, -10.49876)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint60" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -19.495453, 0.55335987, -10.484631)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint61" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -16.324545, 0.15652204, -10.554599)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint62" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -15.152682, 0.15652204, -11.303467)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint63" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.729024, 0.15652204, -12.194191)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint64" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -14.277532, 0.15652204, -14.082834)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint65" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -13.491924, 0.15652204, -15.892927)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint66" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -12.1215515, 0.15652204, -16.979216)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint67" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -10.398837, 0.15652204, -15.9098835)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint68" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -9.605304, 0.15652204, -13.629887)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint69" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -9.252635, 0.15652204, -11.484989)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint70" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -8.5241375, 0.15652204, -10.433505)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint71" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -6.368126, 0.15652204, -9.532212)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint72" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -4.8027706, 0.15652204, -9.323942)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint73" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -2.8606796, 0.15652204, -8.7060175)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint74" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.9506283, 0.15652204, -6.9528494)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint75" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.4918747, 0.15652204, -3.233344)
+skeleton = NodePath("../../Waypoints2")
+
+[node name="waypoint76" parent="Waypoints3" instance=ExtResource("50_l33cg")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.4977131, 0.15652204, 2.847499)
+skeleton = NodePath("../../Waypoints2")

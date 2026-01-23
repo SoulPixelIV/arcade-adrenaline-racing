@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn37woivj3p7t"]
+[gd_scene load_steps=3 format=3 uid="uid://dubqaafx1s076"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_odjyd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpmlp"]
 transparency = 1
-albedo_color = Color(0.63529414, 0, 0, 0.22352941)
+albedo_color = Color(0.33837387, 0.31816864, 0.38508484, 0.22352941)
 
 [node name="waypoint" type="MeshInstance3D"]
 visible = false
