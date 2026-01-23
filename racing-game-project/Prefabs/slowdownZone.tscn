@@ -9,7 +9,6 @@ albedo_color = Color(0.2509804, 0.5411765, 0.2784314, 0.28627452)
 [sub_resource type="BoxShape3D" id="BoxShape3D_txtpd"]
 
 [node name="slowdownZone" type="MeshInstance3D"]
-visible = false
 mesh = SubResource("BoxMesh_odjyd")
 surface_material_override/0 = SubResource("StandardMaterial3D_xpmlp")
 

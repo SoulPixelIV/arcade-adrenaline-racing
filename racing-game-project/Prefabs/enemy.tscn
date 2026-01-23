@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://crhannlct87ev"]
+[gd_scene load_steps=16 format=4 uid="uid://c03r37emq5mjb"]
 
 [ext_resource type="Script" uid="uid://dwmfy12436a3c" path="res://Scripts/player.gd" id="1_y6xdh"]
 [ext_resource type="Texture2D" uid="uid://dgsefh7rurjrs" path="res://Models/Player/colormap.png" id="2_5wxv7"]
@@ -42,6 +42,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wpjnv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lgw76"]
+albedo_color = Color(0.020023644, 1.8000901e-05, 0.5552997, 1)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_juxdh"]
 _surfaces = [{
@@ -182,7 +185,7 @@ shadow_mesh = SubResource("ArrayMesh_m62uw")
 [sub_resource type="BoxShape3D" id="BoxShape3D_5wxv7"]
 size = Vector3(0.328125, 0.19454956, 0.8897705)
 
-[node name="Player" type="VehicleBody3D"]
+[node name="VehicleBody3D" type="VehicleBody3D"]
 collision_layer = 2
 collision_mask = 13
 mass = 500.0
@@ -192,6 +195,7 @@ script = ExtResource("1_y6xdh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7498714e-14, 0.05, -1.8047785e-16)
 mesh = SubResource("ArrayMesh_5wxv7")
 skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_lgw76")
 
 [node name="VehicleWheel3DBL" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.245, 0.15, -0.44)
