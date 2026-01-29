@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="racing-game-project"
-run/main_scene="uid://qse6u0exylp5"
+run/main_scene="uid://yipebpg486aa"
+run/disable_stdout=true
 config/features=PackedStringArray("4.5", "Forward Plus")
 
 [display]

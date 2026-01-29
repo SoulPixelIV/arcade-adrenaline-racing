@@ -13,6 +13,7 @@ var currCheckpoint = 0
 @onready var wheel_fr: VehicleWheel3D = $VehicleWheel3DFR
 @onready var wheel_bl: VehicleWheel3D = $VehicleWheel3DBL
 @onready var wheel_br: VehicleWheel3D = $VehicleWheel3DBR
+@onready var engine_sound = $AudioStreamPlayer3D
 
 @export var timer: Label
 @export var score: Label
@@ -64,6 +65,10 @@ func _physics_process(delta: float) -> void:
 		if lockzoneArea.get_overlapping_bodies().has(self):
 			angular_velocity = Vector3(0,0,0)
 				
+		
+	#Sound
+	var pitch = lerp(0.5, 1.5, speed / MAX_SPEED)
+	engine_sound.pitch_scale = pitch
 		
 	#Picking up Gas
 	for gasPickup in gas:

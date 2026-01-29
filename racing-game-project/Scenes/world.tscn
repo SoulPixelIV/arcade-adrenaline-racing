@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://qse6u0exylp5"]
+[gd_scene load_steps=73 format=3 uid="uid://qse6u0exylp5"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1v0n1xk3c6gl" path="res://Models/Kenney-Models/roadStartPositions.obj" id="1_1cojt"]
 [ext_resource type="ArrayMesh" uid="uid://5q4raib2spkx" path="res://Models/Kenney-Models/roadStart.obj" id="2_yq1aw"]
@@ -38,6 +38,7 @@
 [ext_resource type="ArrayMesh" uid="uid://gf1gem4d7til" path="res://Models/Kenney-Models/barrierWall.obj" id="37_p5wkl"]
 [ext_resource type="ArrayMesh" uid="uid://b8cvigyembrnv" path="res://Models/Kenney-Models/lightRedDouble.obj" id="37_r74th"]
 [ext_resource type="ArrayMesh" uid="uid://cuh6243lvrret" path="res://Models/Kenney-Models/lightPostModern.obj" id="38_04jkj"]
+[ext_resource type="AudioStream" uid="uid://cv7000i75fjmh" path="res://Sounds/bgMusic.mp3" id="38_13n8b"]
 [ext_resource type="Script" uid="uid://cdtce60xyl4j0" path="res://Scripts/enemy.gd" id="39_04jkj"]
 [ext_resource type="PackedScene" uid="uid://c03r37emq5mjb" path="res://Prefabs/enemy.tscn" id="39_xcb5n"]
 [ext_resource type="PackedScene" uid="uid://cn37woivj3p7t" path="res://Prefabs/waypoint.tscn" id="40_lkcvt"]
@@ -4220,6 +4221,13 @@ skeleton = NodePath("../..")
 transform = Transform3D(-0.25, 0, -2.1855694e-08, 0, 0.25, 0, 2.1855694e-08, 0, -0.25, 0, 0.57062554, -0.055370092)
 script = ExtResource("29_qebug")
 target = NodePath("../Player")
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Node3D/Camera3D"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Node3D/Camera3D"]
+stream = ExtResource("38_13n8b")
+autoplay = true
+bus = &"music"
 
 [node name="Collider87" parent="Node3D" instance=ExtResource("27_dt0r1")]
 transform = Transform3D(0.06949475, 0, 0, 0, 1.7035741, 0, 0, 0, 4.8041177, -36.179733, -0.44896317, 18.215994)
