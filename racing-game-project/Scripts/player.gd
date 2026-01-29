@@ -24,100 +24,102 @@ var currCheckpoint = 0
 @export var gasBig: Array[Node3D]
 @export var lockzone: Node3D
 @export var checkpoints: Array[Node3D]
+@export var intro: Node3D
 
 var grounded = false
 
 func _physics_process(delta: float) -> void:
-	var input := Input.get_axis("Break", "Gas")
 	var speed := linear_velocity.length()
-	var steerValue = Input.get_axis("Right", "Left") * MAX_STEER
 	
-	#Check Grounded
-	if wheel_fl.is_in_contact() and wheel_fr.is_in_contact() and wheel_bl.is_in_contact() and wheel_br.is_in_contact():
-		grounded = true
-	else:
-		grounded = false
-	
-	#Steering
-	if steerValue != 0:
-		steering = move_toward(steering, steerValue, delta * 10)
-	else:
-		steering = move_toward(steering, 0.0, delta * 5.0)
-	
-	#Forward & Backward
-	if input != 0:
-		engine_force = Input.get_axis("Break", "Gas") * ENGINE_POWER
-	else:
-		engine_force = sign(speed) * ENGINE_BRAKE
-	
-	#Clamp Max Speed
-	if speed > MAX_SPEED:
-		linear_velocity = linear_velocity.normalized() * MAX_SPEED
+	if intro.startTimer <= 1:
+		var input := Input.get_axis("Break", "Gas")
+		var steerValue = Input.get_axis("Right", "Left") * MAX_STEER
 		
-	#Stop car from moving on its own
-	if input == 0:
-		brake = 2
+		#Check Grounded
+		if wheel_fl.is_in_contact() and wheel_fr.is_in_contact() and wheel_bl.is_in_contact() and wheel_br.is_in_contact():
+			grounded = true
+		else:
+			grounded = false
 		
-	#Entering Lock Zone
-	var lockzoneArea = null
-	if is_instance_valid(lockzone):
-		lockzoneArea = lockzone.get_node_or_null("Area3D")
-	if lockzoneArea:
-		if lockzoneArea.get_overlapping_bodies().has(self):
-			angular_velocity = Vector3(0,0,0)
+		#Steering
+		if steerValue != 0:
+			steering = move_toward(steering, steerValue, delta * 10)
+		else:
+			steering = move_toward(steering, 0.0, delta * 5.0)
+		
+		#Forward & Backward
+		if input != 0:
+			engine_force = Input.get_axis("Break", "Gas") * ENGINE_POWER
+		else:
+			engine_force = sign(speed) * ENGINE_BRAKE
+		
+		#Clamp Max Speed
+		if speed > MAX_SPEED:
+			linear_velocity = linear_velocity.normalized() * MAX_SPEED
+			
+		#Stop car from moving on its own
+		if input == 0:
+			brake = 2
+			
+		#Entering Lock Zone
+		var lockzoneArea = null
+		if is_instance_valid(lockzone):
+			lockzoneArea = lockzone.get_node_or_null("Area3D")
+		if lockzoneArea:
+			if lockzoneArea.get_overlapping_bodies().has(self):
+				angular_velocity = Vector3(0,0,0)
+			
+		#Picking up Gas
+		for gasPickup in gas:
+			var area = null
+			if is_instance_valid(gasPickup):
+				area = gasPickup.get_node_or_null("jerrycan_grp_low/jerrycan_geo_low/Area3D")
+			if area:
+				if area.get_overlapping_bodies().has(self):
+					pickup_sound.play()
+					timer.gameTime += 2
+					gameScore += 2500
+					gasPickup.queue_free()
+					break
+					
+		for gasPickupBig in gasBig:
+			var area2 = null
+			if is_instance_valid(gasPickupBig):
+				area2 = gasPickupBig.get_node_or_null("jerrycan_grp_low/jerrycan_geo_low/Area3D")
+			if area2:
+				if area2.get_overlapping_bodies().has(self):
+					pickup_sound.play()
+					timer.gameTime += 10
+					gameScore += 15000
+					gasPickupBig.queue_free()
+					
+		#Score
+		score.text = "Score: " + str(gameScore)
+		
+		#Place
+		place.text = str(gamePlace) + "/4"
+		
+		if currCheckpoint >= checkpoints.size():
+			return
+		
+		var distToCheckpoint = checkpoints[currCheckpoint].global_position - global_position
+		
+		var better_enemies := 0
+		
+		for e in enemies:
+			if not is_instance_valid(e):
+				continue
+		
+			var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - e.global_position
+			if distToCheckpoint.length() < 3 || enemyDistToCheckpoint.length() < 3:
+				if currCheckpoint < checkpoints.size() - 1:
+					currCheckpoint += 1
 				
+			if enemyDistToCheckpoint.length() < distToCheckpoint.length():
+				better_enemies += 1
+		
+		gamePlace = better_enemies + 1
 		
 	#Sound
 	var pitch = lerp(0.5, 1.5, speed / MAX_SPEED)
 	engine_sound.pitch_scale = pitch
-		
-	#Picking up Gas
-	for gasPickup in gas:
-		var area = null
-		if is_instance_valid(gasPickup):
-			area = gasPickup.get_node_or_null("jerrycan_grp_low/jerrycan_geo_low/Area3D")
-		if area:
-			if area.get_overlapping_bodies().has(self):
-				pickup_sound.play()
-				timer.gameTime += 2
-				gameScore += 2500
-				gasPickup.queue_free()
-				break
-				
-	for gasPickupBig in gasBig:
-		var area2 = null
-		if is_instance_valid(gasPickupBig):
-			area2 = gasPickupBig.get_node_or_null("jerrycan_grp_low/jerrycan_geo_low/Area3D")
-		if area2:
-			if area2.get_overlapping_bodies().has(self):
-				pickup_sound.play()
-				timer.gameTime += 10
-				gameScore += 15000
-				gasPickupBig.queue_free()
-				
-	#Score
-	score.text = "Score: " + str(gameScore)
-	
-	#Place
-	place.text = str(gamePlace) + "/4"
-	
-	if currCheckpoint >= checkpoints.size():
-		return
-	
-	var distToCheckpoint = checkpoints[currCheckpoint].global_position - global_position
-	
-	var better_enemies := 0
-	
-	for e in enemies:
-		if not is_instance_valid(e):
-			continue
-	
-		var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - e.global_position
-		if distToCheckpoint.length() < 3 || enemyDistToCheckpoint.length() < 3:
-			if currCheckpoint < checkpoints.size() - 1:
-				currCheckpoint += 1
-			
-		if enemyDistToCheckpoint.length() < distToCheckpoint.length():
-			better_enemies += 1
-	
-	gamePlace = better_enemies + 1

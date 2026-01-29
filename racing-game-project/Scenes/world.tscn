@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://qse6u0exylp5"]
+[gd_scene load_steps=75 format=3 uid="uid://qse6u0exylp5"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1v0n1xk3c6gl" path="res://Models/Kenney-Models/roadStartPositions.obj" id="1_1cojt"]
 [ext_resource type="ArrayMesh" uid="uid://5q4raib2spkx" path="res://Models/Kenney-Models/roadStart.obj" id="2_yq1aw"]
@@ -40,6 +40,7 @@
 [ext_resource type="ArrayMesh" uid="uid://cuh6243lvrret" path="res://Models/Kenney-Models/lightPostModern.obj" id="38_04jkj"]
 [ext_resource type="AudioStream" uid="uid://cv7000i75fjmh" path="res://Sounds/bgMusic.mp3" id="38_13n8b"]
 [ext_resource type="Script" uid="uid://cdtce60xyl4j0" path="res://Scripts/enemy.gd" id="39_04jkj"]
+[ext_resource type="AudioStream" uid="uid://vlhfkejoo4gn" path="res://Sounds/countdown.wav" id="39_gwaj6"]
 [ext_resource type="PackedScene" uid="uid://c03r37emq5mjb" path="res://Prefabs/enemy.tscn" id="39_xcb5n"]
 [ext_resource type="PackedScene" uid="uid://cn37woivj3p7t" path="res://Prefabs/waypoint.tscn" id="40_lkcvt"]
 [ext_resource type="PackedScene" uid="uid://dlnropbu6jrmt" path="res://Prefabs/slowdownZone.tscn" id="41_atqvy"]
@@ -52,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://drefxoy3ptv1v" path="res://Prefabs/waypoint2.tscn" id="49_b4e6k"]
 [ext_resource type="PackedScene" uid="uid://bbu28xmy522" path="res://Prefabs/enemy3.tscn" id="50_0sgyr"]
 [ext_resource type="PackedScene" uid="uid://dubqaafx1s076" path="res://Prefabs/waypoint3.tscn" id="50_l33cg"]
+[ext_resource type="Script" uid="uid://08fy4ysepf1g" path="res://Scripts/intro.gd" id="53_uqdn7"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dt0r1"]
 data = PackedVector3Array(-0.9183, 0.5, 0, -0.9183, 0.5, 1, -1, 0.5, 0, -1, 0.5, 1, -1, 0.5, 0, -0.9183, 0.5, 1, 0, 0.5, 0, 0, 0.5, 1, -0.0817, 0.5, 0, -0.0817, 0.5, 1, -0.0817, 0.5, 0, 0, 0.5, 1, 0, 0.39339998, 1, -1, 0.39339998, 1, 0, 0.5, 1, -1, 0.5, 1, 0, 0.5, 1, -1, 0.39339998, 1, -0.0817, 0.5, 1, 0, 0.5, 1, -1, 0.5, 1, -0.9183, 0.5, 1, -0.0817, 0.5, 1, -1, 0.5, 1, -0.9183, 0.5, 1, -0.1549, 0.51, 1, -0.0817, 0.5, 1, -0.0817, 0.52, 1, -0.0817, 0.5, 1, -0.1549, 0.51, 1, -0.1549, 0.52, 1, -0.0817, 0.52, 1, -0.1549, 0.51, 1, -0.1549, 0.51, 1, -0.9183, 0.5, 1, -0.8451, 0.51, 1, -0.9183, 0.52, 1, -0.8451, 0.51, 1, -0.9183, 0.5, 1, -0.8451, 0.52, 1, -0.8451, 0.51, 1, -0.9183, 0.52, 1, 0, 0.5, 0, 0, 0.39339998, 0, 0, 0.5, 1, 0, 0.39339998, 1, 0, 0.5, 1, 0, 0.39339998, 0, -1, 0.39339998, 0, -0.95, 0.39339998, 0, -1, 0.5, 0, -0.95, 0, 0, -0.049999997, 0, 0, -0.95, 0.39339998, 0, -0.049999997, 0.39339998, 0, -0.95, 0.39339998, 0, -0.049999997, 0, 0, -0.049999997, 0.39339998, 0, -1, 0.5, 0, -0.95, 0.39339998, 0, 0, 0.39339998, 0, -1, 0.5, 0, -0.049999997, 0.39339998, 0, 0, 0.5, 0, -1, 0.5, 0, 0, 0.39339998, 0, -0.9183, 0.5, 0, -1, 0.5, 0, 0, 0.5, 0, -0.0817, 0.5, 0, -0.9183, 0.5, 0, 0, 0.5, 0, -0.0817, 0.5, 0, -0.8451, 0.51, 0, -0.9183, 0.5, 0, -0.9183, 0.52, 0, -0.9183, 0.5, 0, -0.8451, 0.51, 0, -0.8451, 0.52, 0, -0.9183, 0.52, 0, -0.8451, 0.51, 0, -0.8451, 0.51, 0, -0.0817, 0.5, 0, -0.1549, 0.51, 0, -0.0817, 0.52, 0, -0.1549, 0.51, 0, -0.0817, 0.5, 0, -0.1549, 0.52, 0, -0.1549, 0.51, 0, -0.0817, 0.52, 0, -1, 0.39339998, 0, -1, 0.5, 0, -1, 0.39339998, 1, -1, 0.5, 1, -1, 0.39339998, 1, -1, 0.5, 0, -0.049999997, 0, 0.1183, -0.049999997, 0, 0, -0.95, 0, 0.1183, -0.95, 0, 0, -0.95, 0, 0.1183, -0.049999997, 0, 0, -0.049999997, 0, 0.1183, -0.95, 0, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.95, 0, 0.1183, -0.049999997, 0.39339998, 0, -0.049999997, 0, 0, -0.049999997, 0.39339998, 0.1183, -0.049999997, 0, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.049999997, 0, 0, 0, 0.39339998, 0, -0.049999997, 0.39339998, 0.1183, 0, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, 0, 0.39339998, 0, -0.049999997, 0.39339998, 0, -1, 0.39339998, 1, 0, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0.1183, -1, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0, -1, 0.39339998, 1, -0.95, 0.39339998, 0.1183, -1, 0.39339998, 0, -1, 0.39339998, 1, -0.95, 0.39339998, 0, -0.95, 0, 0, -0.95, 0.39339998, 0, -0.95, 0, 0.1183, -0.95, 0.39339998, 0.1183, -0.95, 0, 0.1183, -0.95, 0.39339998, 0, -0.8451, 0.52, 0, -0.8451, 0.52, 1, -0.9183, 0.52, 0, -0.9183, 0.52, 1, -0.9183, 0.52, 0, -0.8451, 0.52, 1, -0.8451, 0.52, 0, -0.8451, 0.51, 0, -0.8451, 0.52, 1, -0.8451, 0.51, 1, -0.8451, 0.52, 1, -0.8451, 0.51, 0, -0.9183, 0.5, 0, -0.9183, 0.52, 0, -0.9183, 0.5, 1, -0.9183, 0.52, 1, -0.9183, 0.5, 1, -0.9183, 0.52, 0, -0.0817, 0.52, 0, -0.0817, 0.5, 0, -0.0817, 0.52, 1, -0.0817, 0.5, 1, -0.0817, 0.52, 1, -0.0817, 0.5, 0, -0.0817, 0.52, 0, -0.0817, 0.52, 1, -0.1549, 0.52, 0, -0.1549, 0.52, 1, -0.1549, 0.52, 0, -0.0817, 0.52, 1, -0.1549, 0.51, 0, -0.1549, 0.52, 0, -0.1549, 0.51, 1, -0.1549, 0.52, 1, -0.1549, 0.51, 1, -0.1549, 0.52, 0, -0.1549, 0.51, 0, -0.1549, 0.51, 1, -0.8451, 0.51, 0, -0.8451, 0.51, 1, -0.8451, 0.51, 0, -0.1549, 0.51, 1, -0.9183, 0.5, 0, -0.9183, 0.5, 1, -1, 0.5, 0, -1, 0.5, 1, -1, 0.5, 0, -0.9183, 0.5, 1, 0, 0.5, 0, 0, 0.5, 1, -0.0817, 0.5, 0, -0.0817, 0.5, 1, -0.0817, 0.5, 0, 0, 0.5, 1, 0, 0.39339998, 1, -1, 0.39339998, 1, 0, 0.5, 1, -1, 0.5, 1, 0, 0.5, 1, -1, 0.39339998, 1, -0.0817, 0.5, 1, 0, 0.5, 1, -1, 0.5, 1, -0.9183, 0.5, 1, -0.0817, 0.5, 1, -1, 0.5, 1, -0.9183, 0.5, 1, -0.1549, 0.51, 1, -0.0817, 0.5, 1, -0.0817, 0.52, 1, -0.0817, 0.5, 1, -0.1549, 0.51, 1, -0.1549, 0.52, 1, -0.0817, 0.52, 1, -0.1549, 0.51, 1, -0.1549, 0.51, 1, -0.9183, 0.5, 1, -0.8451, 0.51, 1, -0.9183, 0.52, 1, -0.8451, 0.51, 1, -0.9183, 0.5, 1, -0.8451, 0.52, 1, -0.8451, 0.51, 1, -0.9183, 0.52, 1, 0, 0.5, 0, 0, 0.39339998, 0, 0, 0.5, 1, 0, 0.39339998, 1, 0, 0.5, 1, 0, 0.39339998, 0, -1, 0.39339998, 0, -0.95, 0.39339998, 0, -1, 0.5, 0, -0.95, 0, 0, -0.049999997, 0, 0, -0.95, 0.39339998, 0, -0.049999997, 0.39339998, 0, -0.95, 0.39339998, 0, -0.049999997, 0, 0, -0.049999997, 0.39339998, 0, -1, 0.5, 0, -0.95, 0.39339998, 0, 0, 0.39339998, 0, -1, 0.5, 0, -0.049999997, 0.39339998, 0, 0, 0.5, 0, -1, 0.5, 0, 0, 0.39339998, 0, -0.9183, 0.5, 0, -1, 0.5, 0, 0, 0.5, 0, -0.0817, 0.5, 0, -0.9183, 0.5, 0, 0, 0.5, 0, -0.0817, 0.5, 0, -0.8451, 0.51, 0, -0.9183, 0.5, 0, -0.9183, 0.52, 0, -0.9183, 0.5, 0, -0.8451, 0.51, 0, -0.8451, 0.52, 0, -0.9183, 0.52, 0, -0.8451, 0.51, 0, -0.8451, 0.51, 0, -0.0817, 0.5, 0, -0.1549, 0.51, 0, -0.0817, 0.52, 0, -0.1549, 0.51, 0, -0.0817, 0.5, 0, -0.1549, 0.52, 0, -0.1549, 0.51, 0, -0.0817, 0.52, 0, -1, 0.39339998, 0, -1, 0.5, 0, -1, 0.39339998, 1, -1, 0.5, 1, -1, 0.39339998, 1, -1, 0.5, 0, -0.049999997, 0, 0.1183, -0.049999997, 0, 0, -0.95, 0, 0.1183, -0.95, 0, 0, -0.95, 0, 0.1183, -0.049999997, 0, 0, -0.049999997, 0, 0.1183, -0.95, 0, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.95, 0, 0.1183, -0.049999997, 0.39339998, 0, -0.049999997, 0, 0, -0.049999997, 0.39339998, 0.1183, -0.049999997, 0, 0.1183, -0.049999997, 0.39339998, 0.1183, -0.049999997, 0, 0, 0, 0.39339998, 0, -0.049999997, 0.39339998, 0.1183, 0, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, 0, 0.39339998, 0, -0.049999997, 0.39339998, 0, -1, 0.39339998, 1, 0, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0.1183, -1, 0.39339998, 1, -0.049999997, 0.39339998, 0.1183, -0.95, 0.39339998, 0, -1, 0.39339998, 1, -0.95, 0.39339998, 0.1183, -1, 0.39339998, 0, -1, 0.39339998, 1, -0.95, 0.39339998, 0, -0.95, 0, 0, -0.95, 0.39339998, 0, -0.95, 0, 0.1183, -0.95, 0.39339998, 0.1183, -0.95, 0, 0.1183, -0.95, 0.39339998, 0, -0.8451, 0.52, 0, -0.8451, 0.52, 1, -0.9183, 0.52, 0, -0.9183, 0.52, 1, -0.9183, 0.52, 0, -0.8451, 0.52, 1, -0.8451, 0.52, 0, -0.8451, 0.51, 0, -0.8451, 0.52, 1, -0.8451, 0.51, 1, -0.8451, 0.52, 1, -0.8451, 0.51, 0, -0.9183, 0.5, 0, -0.9183, 0.52, 0, -0.9183, 0.5, 1, -0.9183, 0.52, 1, -0.9183, 0.5, 1, -0.9183, 0.52, 0, -0.0817, 0.52, 0, -0.0817, 0.5, 0, -0.0817, 0.52, 1, -0.0817, 0.5, 1, -0.0817, 0.52, 1, -0.0817, 0.5, 0, -0.0817, 0.52, 0, -0.0817, 0.52, 1, -0.1549, 0.52, 0, -0.1549, 0.52, 1, -0.1549, 0.52, 0, -0.0817, 0.52, 1, -0.1549, 0.51, 0, -0.1549, 0.52, 0, -0.1549, 0.51, 1, -0.1549, 0.52, 1, -0.1549, 0.51, 1, -0.1549, 0.52, 0, -0.1549, 0.51, 0, -0.1549, 0.51, 1, -0.8451, 0.51, 0, -0.8451, 0.51, 1, -0.8451, 0.51, 0, -0.1549, 0.51, 1)
@@ -120,7 +122,7 @@ transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "enemies", "gas", "gasBig", "lockzone", "checkpoints") instance=ExtResource("27_hmc15")]
+[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "enemies", "gas", "gasBig", "lockzone", "checkpoints", "intro") instance=ExtResource("27_hmc15")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32637048, 0, 0.16292945)
 timer = NodePath("../../UI/TimeLeft")
 score = NodePath("../../UI/Score")
@@ -130,6 +132,7 @@ gas = [NodePath("../jerrycan_low"), NodePath("../jerrycan_low2"), NodePath("../j
 gasBig = [NodePath("../jerrycan_low15BIG"), NodePath("../jerrycan_low37BIG"), NodePath("../jerrycan_low46BIG"), NodePath("../jerrycan_low49BIG"), NodePath("../jerrycan_low52BIG"), NodePath("../jerrycan_low59BIG"), NodePath("../jerrycan_low60BIG")]
 lockzone = NodePath("../../lockZone")
 checkpoints = [NodePath("../../Checkpoints/checkpoint"), NodePath("../../Checkpoints/checkpoint2"), NodePath("../../Checkpoints/checkpoint3"), NodePath("../../Checkpoints/checkpoint4"), NodePath("../../Checkpoints/checkpoint5"), NodePath("../../Checkpoints/checkpoint6"), NodePath("../../Checkpoints/checkpoint7"), NodePath("../../Checkpoints/checkpoint8"), NodePath("../../Checkpoints/checkpoint9"), NodePath("../../Checkpoints/checkpoint10"), NodePath("../../Checkpoints/checkpoint11"), NodePath("../../Checkpoints/checkpoint12")]
+intro = NodePath("../../Intro")
 
 [node name="RoadStartPositions" type="MeshInstance3D" parent="Node3D"]
 mesh = ExtResource("1_1cojt")
@@ -4229,6 +4232,10 @@ stream = ExtResource("38_13n8b")
 autoplay = true
 bus = &"music"
 
+[node name="Countdown" type="AudioStreamPlayer3D" parent="Node3D/Camera3D"]
+stream = ExtResource("39_gwaj6")
+bus = &"sfx"
+
 [node name="Collider87" parent="Node3D" instance=ExtResource("27_dt0r1")]
 transform = Transform3D(0.06949475, 0, 0, 0, 1.7035741, 0, 0, 0, 4.8041177, -36.179733, -0.44896317, 18.215994)
 skeleton = NodePath("../../..")
@@ -4680,8 +4687,8 @@ skeleton = NodePath("../../..")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dt0r1")
 
-[node name="Enemy" parent="." node_paths=PackedStringArray("waypoints", "slowdownZones") instance=ExtResource("39_xcb5n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6575552, 0.031522274, 0.6374234)
+[node name="Enemy" parent="." node_paths=PackedStringArray("waypoints", "slowdownZones", "intro") instance=ExtResource("39_xcb5n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6346464, 0.031522274, 0.6374234)
 script = ExtResource("39_04jkj")
 MAX_STEER = 0.55
 ENGINE_POWER = 800
@@ -4690,6 +4697,7 @@ ENGINE_BRAKE = 10.0
 waypoints = [NodePath("../Waypoints/waypoint"), NodePath("../Waypoints/waypoint2"), NodePath("../Waypoints/waypoint3"), NodePath("../Waypoints/waypoint3"), NodePath("../Waypoints/waypoint4"), NodePath("../Waypoints/waypoint5"), NodePath("../Waypoints/waypoint6"), NodePath("../Waypoints/waypoint7"), NodePath("../Waypoints/waypoint8"), NodePath("../Waypoints/waypoint9"), NodePath("../Waypoints/waypoint10"), NodePath("../Waypoints/waypoint11"), NodePath("../Waypoints/waypoint12"), NodePath("../Waypoints/waypoint13"), NodePath("../Waypoints/waypoint14"), NodePath("../Waypoints/waypoint15"), NodePath("../Waypoints/waypoint16"), NodePath("../Waypoints/waypoint17"), NodePath("../Waypoints/waypoint18"), NodePath("../Waypoints/waypoint19"), NodePath("../Waypoints/waypoint20"), NodePath("../Waypoints/waypoint21"), NodePath("../Waypoints/waypoint22"), NodePath("../Waypoints/waypoint23"), NodePath("../Waypoints/waypoint24"), NodePath("../Waypoints/waypoint25"), NodePath("../Waypoints/waypoint26"), NodePath("../Waypoints/waypoint27"), NodePath("../Waypoints/waypoint28"), NodePath("../Waypoints/waypoint29"), NodePath("../Waypoints/waypoint30"), NodePath("../Waypoints/waypoint31"), NodePath("../Waypoints/waypoint32"), NodePath("../Waypoints/waypoint33"), NodePath("../Waypoints/waypoint34"), NodePath("../Waypoints/waypoint35"), NodePath("../Waypoints/waypoint36"), NodePath("../Waypoints/waypoint37"), NodePath("../Waypoints/waypoint38"), NodePath("../Waypoints/waypoint39"), NodePath("../Waypoints/waypoint40"), NodePath("../Waypoints/waypoint41"), NodePath("../Waypoints/waypoint42"), NodePath("../Waypoints/waypoint43"), NodePath("../Waypoints/waypoint44"), NodePath("../Waypoints/waypoint45"), NodePath("../Waypoints/waypoint46"), NodePath("../Waypoints/waypoint47"), NodePath("../Waypoints/waypoint48"), NodePath("../Waypoints/waypoint49"), NodePath("../Waypoints/waypoint50"), NodePath("../Waypoints/waypoint51"), NodePath("../Waypoints/waypoint52"), NodePath("../Waypoints/waypoint53"), NodePath("../Waypoints/waypoint54"), NodePath("../Waypoints/waypoint55"), NodePath("../Waypoints/waypoint56"), NodePath("../Waypoints/waypoint57"), NodePath("../Waypoints/waypoint58"), NodePath("../Waypoints/waypoint59"), NodePath("../Waypoints/waypoint60"), NodePath("../Waypoints/waypoint61"), NodePath("../Waypoints/waypoint62"), NodePath("../Waypoints/waypoint63"), NodePath("../Waypoints/waypoint64"), NodePath("../Waypoints/waypoint65"), NodePath("../Waypoints/waypoint66"), NodePath("../Waypoints/waypoint67"), NodePath("../Waypoints/waypoint68"), NodePath("../Waypoints/waypoint69"), NodePath("../Waypoints/waypoint70"), NodePath("../Waypoints/waypoint71"), NodePath("../Waypoints/waypoint72"), NodePath("../Waypoints/waypoint73"), NodePath("../Waypoints/waypoint74"), NodePath("../Waypoints/waypoint75"), NodePath("../Waypoints/waypoint76"), NodePath("../Waypoints/waypoint77"), NodePath("../Waypoints/waypoint78")]
 slowdownZones = [NodePath("../SlowdownZones/slowdownZone"), NodePath("../SlowdownZones/slowdownZone2"), NodePath("../SlowdownZones/slowdownZone3"), NodePath("../SlowdownZones/slowdownZone4"), NodePath("../SlowdownZones/slowdownZone5"), NodePath("../SlowdownZones/slowdownZone6"), NodePath("../SlowdownZones/slowdownZone7"), NodePath("../SlowdownZones/slowdownZone8"), NodePath("../SlowdownZones/slowdownZone9"), NodePath("../SlowdownZones/slowdownZone10"), NodePath("../SlowdownZones/slowdownZone11"), NodePath("../SlowdownZones/slowdownZone12"), NodePath("../SlowdownZones/slowdownZone13"), NodePath("../SlowdownZones/slowdownZone14"), NodePath("../SlowdownZones/slowdownZone15"), NodePath("../SlowdownZones/slowdownZone16"), NodePath("../SlowdownZones/slowdownZone17")]
 reach_distance = 3.0
+intro = NodePath("../Intro")
 
 [node name="SlowdownZones" type="Node3D" parent="."]
 
@@ -5081,15 +5089,31 @@ skeleton = NodePath("../..")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="TimeLeft" type="Label" parent="UI"]
+[node name="StartTimer" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.0
+offset_top = -273.0
+offset_right = 332.0
+offset_bottom = 273.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 400
+text = "3"
+horizontal_alignment = 1
+
+[node name="TimeLeft" type="Label" parent="UI" node_paths=PackedStringArray("intro")]
 offset_left = 848.0
 offset_top = -30.0
 offset_right = 1076.0
 offset_bottom = 243.0
 theme_override_font_sizes/font_size = 200
-text = "83"
 horizontal_alignment = 1
 script = ExtResource("43_jwdyn")
+intro = NodePath("../../Intro")
 
 [node name="Place" type="Label" parent="UI"]
 offset_left = 1616.0
@@ -5097,7 +5121,7 @@ offset_top = 848.0
 offset_right = 1863.0
 offset_bottom = 1080.0
 theme_override_font_sizes/font_size = 170
-text = "1st"
+text = "4/4"
 
 [node name="Score" type="Label" parent="UI"]
 offset_left = 152.0
@@ -5105,7 +5129,7 @@ offset_top = 960.0
 offset_right = 515.0
 offset_bottom = 1048.0
 theme_override_font_sizes/font_size = 60
-text = "Score: 17000"
+text = "Score: 0"
 
 [node name="SubViewport" type="SubViewport" parent="UI"]
 transparent_bg = true
@@ -5175,8 +5199,8 @@ transform = Transform3D(1.0940638, 0, 0, 0, 0.6611122, 0, 0, 0, 1.0823152, -8.82
 [node name="checkpoint12" parent="Checkpoints" instance=ExtResource("45_al5m0")]
 transform = Transform3D(1.1899809, 0, 0, 0, 0.7130066, 0, 0, 0, 1.1373161, -1.1219444, 0.15652204, -8.721285)
 
-[node name="Enemy2" parent="." node_paths=PackedStringArray("waypoints", "slowdownZones") instance=ExtResource("48_te07t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32859838, 0.031522393, 1.1605114)
+[node name="Enemy2" parent="." node_paths=PackedStringArray("waypoints", "slowdownZones", "intro") instance=ExtResource("48_te07t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32859838, 0.031522393, 1.095367)
 script = ExtResource("39_04jkj")
 MAX_STEER = 0.6
 ENGINE_POWER = 850
@@ -5185,6 +5209,7 @@ ENGINE_BRAKE = 11.0
 waypoints = [NodePath("../Waypoints2/waypoint"), NodePath("../Waypoints2/waypoint2"), NodePath("../Waypoints2/waypoint3"), NodePath("../Waypoints2/waypoint4"), NodePath("../Waypoints2/waypoint5"), NodePath("../Waypoints2/waypoint6"), NodePath("../Waypoints2/waypoint7"), NodePath("../Waypoints2/waypoint8"), NodePath("../Waypoints2/waypoint9"), NodePath("../Waypoints2/waypoint10"), NodePath("../Waypoints2/waypoint11"), NodePath("../Waypoints2/waypoint12"), NodePath("../Waypoints2/waypoint38"), NodePath("../Waypoints2/waypoint39"), NodePath("../Waypoints2/waypoint40"), NodePath("../Waypoints2/waypoint41"), NodePath("../Waypoints2/waypoint42"), NodePath("../Waypoints2/waypoint43"), NodePath("../Waypoints2/waypoint44"), NodePath("../Waypoints2/waypoint45"), NodePath("../Waypoints2/waypoint46"), NodePath("../Waypoints2/waypoint47"), NodePath("../Waypoints2/waypoint48"), NodePath("../Waypoints2/waypoint49"), NodePath("../Waypoints2/waypoint50"), NodePath("../Waypoints2/waypoint51"), NodePath("../Waypoints2/waypoint52"), NodePath("../Waypoints2/waypoint53"), NodePath("../Waypoints2/waypoint54"), NodePath("../Waypoints2/waypoint55"), NodePath("../Waypoints2/waypoint56"), NodePath("../Waypoints2/waypoint57"), NodePath("../Waypoints2/waypoint58"), NodePath("../Waypoints2/waypoint13"), NodePath("../Waypoints2/waypoint14"), NodePath("../Waypoints2/waypoint15"), NodePath("../Waypoints2/waypoint16"), NodePath("../Waypoints2/waypoint17"), NodePath("../Waypoints2/waypoint18"), NodePath("../Waypoints2/waypoint19"), NodePath("../Waypoints2/waypoint20"), NodePath("../Waypoints2/waypoint21"), NodePath("../Waypoints2/waypoint22"), NodePath("../Waypoints2/waypoint23"), NodePath("../Waypoints2/waypoint24"), NodePath("../Waypoints2/waypoint25"), NodePath("../Waypoints2/waypoint26"), NodePath("../Waypoints2/waypoint27"), NodePath("../Waypoints2/waypoint28"), NodePath("../Waypoints2/waypoint29"), NodePath("../Waypoints2/waypoint30"), NodePath("../Waypoints2/waypoint31"), NodePath("../Waypoints2/waypoint32"), NodePath("../Waypoints2/waypoint33"), NodePath("../Waypoints2/waypoint34"), NodePath("../Waypoints2/waypoint35"), NodePath("../Waypoints2/waypoint36"), NodePath("../Waypoints2/waypoint37")]
 slowdownZones = [NodePath("../SlowdownZones/slowdownZone"), NodePath("../SlowdownZones/slowdownZone2"), NodePath("../SlowdownZones/slowdownZone3"), NodePath("../SlowdownZones/slowdownZone4"), NodePath("../SlowdownZones/slowdownZone5"), NodePath("../SlowdownZones/slowdownZone6"), NodePath("../SlowdownZones/slowdownZone7"), NodePath("../SlowdownZones/slowdownZone8"), NodePath("../SlowdownZones/slowdownZone9"), NodePath("../SlowdownZones/slowdownZone10"), NodePath("../SlowdownZones/slowdownZone11"), NodePath("../SlowdownZones/slowdownZone12"), NodePath("../SlowdownZones/slowdownZone13"), NodePath("../SlowdownZones/slowdownZone14"), NodePath("../SlowdownZones/slowdownZone15"), NodePath("../SlowdownZones/slowdownZone16"), NodePath("../SlowdownZones/slowdownZone17"), NodePath("../SlowdownZones/slowdownZone18")]
 reach_distance = 3.0
+intro = NodePath("../Intro")
 
 [node name="Waypoints2" type="Node3D" parent="."]
 
@@ -5420,8 +5445,8 @@ skeleton = NodePath("../..")
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.3287716, 0.15652204, 2.787715)
 skeleton = NodePath("../..")
 
-[node name="Enemy3" parent="." node_paths=PackedStringArray("waypoints", "slowdownZones") instance=ExtResource("50_0sgyr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6833937, 0.031522036, 1.6744936)
+[node name="Enemy3" parent="." node_paths=PackedStringArray("waypoints", "slowdownZones", "intro") instance=ExtResource("50_0sgyr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6365027, 0.031522036, 1.5676339)
 script = ExtResource("39_04jkj")
 MAX_STEER = 0.6
 ENGINE_POWER = 870
@@ -5430,6 +5455,7 @@ ENGINE_BRAKE = 11.5
 waypoints = [NodePath("../Waypoints3/waypoint"), NodePath("../Waypoints3/waypoint2"), NodePath("../Waypoints3/waypoint3"), NodePath("../Waypoints3/waypoint4"), NodePath("../Waypoints3/waypoint5"), NodePath("../Waypoints3/waypoint6"), NodePath("../Waypoints3/waypoint7"), NodePath("../Waypoints3/waypoint8"), NodePath("../Waypoints3/waypoint9"), NodePath("../Waypoints3/waypoint10"), NodePath("../Waypoints3/waypoint11"), NodePath("../Waypoints3/waypoint12"), NodePath("../Waypoints3/waypoint13"), NodePath("../Waypoints3/waypoint14"), NodePath("../Waypoints3/waypoint15"), NodePath("../Waypoints3/waypoint16"), NodePath("../Waypoints3/waypoint17"), NodePath("../Waypoints3/waypoint18"), NodePath("../Waypoints3/waypoint19"), NodePath("../Waypoints3/waypoint20"), NodePath("../Waypoints3/waypoint21"), NodePath("../Waypoints3/waypoint22"), NodePath("../Waypoints3/waypoint23"), NodePath("../Waypoints3/waypoint24"), NodePath("../Waypoints3/waypoint25"), NodePath("../Waypoints3/waypoint26"), NodePath("../Waypoints3/waypoint27"), NodePath("../Waypoints3/waypoint28"), NodePath("../Waypoints3/waypoint29"), NodePath("../Waypoints3/waypoint30"), NodePath("../Waypoints3/waypoint31"), NodePath("../Waypoints3/waypoint32"), NodePath("../Waypoints3/waypoint33"), NodePath("../Waypoints3/waypoint34"), NodePath("../Waypoints3/waypoint35"), NodePath("../Waypoints3/waypoint36"), NodePath("../Waypoints3/waypoint37"), NodePath("../Waypoints3/waypoint38"), NodePath("../Waypoints3/waypoint39"), NodePath("../Waypoints3/waypoint40"), NodePath("../Waypoints3/waypoint41"), NodePath("../Waypoints3/waypoint42"), NodePath("../Waypoints3/waypoint43"), NodePath("../Waypoints3/waypoint59"), NodePath("../Waypoints3/waypoint60"), NodePath("../Waypoints3/waypoint61"), NodePath("../Waypoints3/waypoint62"), NodePath("../Waypoints3/waypoint63"), NodePath("../Waypoints3/waypoint64"), NodePath("../Waypoints3/waypoint65"), NodePath("../Waypoints3/waypoint66"), NodePath("../Waypoints3/waypoint67"), NodePath("../Waypoints3/waypoint68"), NodePath("../Waypoints3/waypoint69"), NodePath("../Waypoints3/waypoint70"), NodePath("../Waypoints3/waypoint71"), NodePath("../Waypoints3/waypoint72"), NodePath("../Waypoints3/waypoint73"), NodePath("../Waypoints3/waypoint74"), NodePath("../Waypoints3/waypoint75"), NodePath("../Waypoints3/waypoint76")]
 slowdownZones = [NodePath("../SlowdownZones/slowdownZone"), NodePath("../SlowdownZones/slowdownZone2"), NodePath("../SlowdownZones/slowdownZone3"), NodePath("../SlowdownZones/slowdownZone4"), NodePath("../SlowdownZones/slowdownZone5"), NodePath("../SlowdownZones/slowdownZone6"), NodePath("../SlowdownZones/slowdownZone7"), NodePath("../SlowdownZones/slowdownZone8"), NodePath("../SlowdownZones/slowdownZone9"), NodePath("../SlowdownZones/slowdownZone10"), NodePath("../SlowdownZones/slowdownZone11"), NodePath("../SlowdownZones/slowdownZone12"), NodePath("../SlowdownZones/slowdownZone13"), NodePath("../SlowdownZones/slowdownZone14"), NodePath("../SlowdownZones/slowdownZone15"), NodePath("../SlowdownZones/slowdownZone16"), NodePath("../SlowdownZones/slowdownZone17"), NodePath("../SlowdownZones/slowdownZone18")]
 reach_distance = 3.0
+intro = NodePath("../Intro")
 
 [node name="Waypoints3" type="Node3D" parent="."]
 
@@ -5676,3 +5702,7 @@ skeleton = NodePath("../../Waypoints2")
 [node name="waypoint76" parent="Waypoints3" instance=ExtResource("50_l33cg")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.4977131, 0.15652204, 2.847499)
 skeleton = NodePath("../../Waypoints2")
+
+[node name="Intro" type="Node3D" parent="." node_paths=PackedStringArray("startTimerText")]
+script = ExtResource("53_uqdn7")
+startTimerText = NodePath("../UI/StartTimer")

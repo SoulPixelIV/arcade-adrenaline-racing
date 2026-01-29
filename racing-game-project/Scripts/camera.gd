@@ -1,11 +1,26 @@
 extends Node3D
 
 @export var target: Node3D
+
+@onready var countdown_sound = $Countdown
+
 var distance := 1.6
 var height := 0.9
 var lookOffset = 0.5
 
+var countdownTimer = 0.0
+var beepCount = 0
+
 func _process(delta: float) -> void:
+	
+	#Countdown Sound
+	if beepCount < 6:
+		countdownTimer -= delta / 1.5
+	if countdownTimer <= 0:
+		countdown_sound.play()
+		countdownTimer = 1
+		beepCount += 1
+	
 	if not target:
 		return
 		
