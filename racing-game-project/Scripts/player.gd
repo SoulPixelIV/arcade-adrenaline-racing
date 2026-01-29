@@ -13,7 +13,8 @@ var currCheckpoint = 0
 @onready var wheel_fr: VehicleWheel3D = $VehicleWheel3DFR
 @onready var wheel_bl: VehicleWheel3D = $VehicleWheel3DBL
 @onready var wheel_br: VehicleWheel3D = $VehicleWheel3DBR
-@onready var engine_sound = $AudioStreamPlayer3D
+@onready var engine_sound = $EngineSound
+@onready var pickup_sound = $PickupSound
 
 @export var timer: Label
 @export var score: Label
@@ -77,6 +78,7 @@ func _physics_process(delta: float) -> void:
 			area = gasPickup.get_node_or_null("jerrycan_grp_low/jerrycan_geo_low/Area3D")
 		if area:
 			if area.get_overlapping_bodies().has(self):
+				pickup_sound.play()
 				timer.gameTime += 2
 				gameScore += 2500
 				gasPickup.queue_free()
@@ -88,6 +90,7 @@ func _physics_process(delta: float) -> void:
 			area2 = gasPickupBig.get_node_or_null("jerrycan_grp_low/jerrycan_geo_low/Area3D")
 		if area2:
 			if area2.get_overlapping_bodies().has(self):
+				pickup_sound.play()
 				timer.gameTime += 10
 				gameScore += 15000
 				gasPickupBig.queue_free()
