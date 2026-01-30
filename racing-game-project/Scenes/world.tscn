@@ -113,6 +113,19 @@ sky_material = SubResource("PanoramaSkyMaterial_hmc15")
 [sub_resource type="Environment" id="Environment_dt0r1"]
 background_mode = 2
 sky = SubResource("Sky_hmc15")
+ssao_enabled = true
+ssao_intensity = 3.0
+glow_enabled = true
+glow_intensity = 3.5
+glow_bloom = 0.03
+fog_light_color = Color(0.7088508, 0.8914177, 0.9930777, 1)
+fog_density = 0.001
+fog_sky_affect = 0.2
+volumetric_fog_density = 0.01
+volumetric_fog_emission = Color(0, 0.29267254, 0.05126773, 1)
+volumetric_fog_sky_affect = 0.736
+adjustment_enabled = true
+adjustment_saturation = 1.2
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_al5m0"]
 viewport_path = NodePath("UI/SubViewport")
@@ -865,7 +878,7 @@ mesh = ExtResource("22_i4fjy")
 skeleton = NodePath("../../TreeLarge9")
 
 [node name="Grass" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -18, -0.001, 4)
+transform = Transform3D(100, 0, 0, 0, 50, 0, 0, 0, 100, -18, -0.001, 4)
 mesh = SubResource("PlaneMesh_1cojt")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_yq1aw")
