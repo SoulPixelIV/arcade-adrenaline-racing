@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://btc3gv71h2ry"]
+[gd_scene load_steps=12 format=3 uid="uid://btc3gv71h2ry"]
 
 [ext_resource type="PackedScene" uid="uid://f58twdkoc7ye" path="res://Models/jerrycan_low/jerrycan_low.fbx" id="1_yjcoj"]
 [ext_resource type="Texture2D" uid="uid://c8ljbxl4vo5la" path="res://Models/jerrycan_low/textures/jerrycan_mat_Diffuse.png" id="2_uf24o"]
@@ -12,6 +12,26 @@ normal_enabled = true
 normal_texture = ExtResource("3_vfmmi")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8r0wo"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8r0wo"]
+
+[sub_resource type="Gradient" id="Gradient_i30kd"]
+offsets = PackedFloat32Array(0, 0.9953052)
+colors = PackedColorArray(1, 1, 0, 1, 1, 0.5411765, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hyqtj"]
+gradient = SubResource("Gradient_i30kd")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhrt1"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0.973339, 0.68004876, 1)
+albedo_texture = SubResource("GradientTexture2D_hyqtj")
+
+[sub_resource type="QuadMesh" id="QuadMesh_5ht31"]
+material = SubResource("StandardMaterial3D_mhrt1")
 
 [node name="jerrycan_low" instance=ExtResource("1_yjcoj")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -32,3 +52,9 @@ shape = SubResource("BoxShape3D_8r0wo")
 transform = Transform3D(1.4285715, 0, 0, 0, -6.244484e-08, 1.4285715, 0, -1.4285715, -6.244484e-08, 0, 0, 0)
 light_color = Color(1.6605109e-06, 0.62763196, 0.13561162, 1)
 spot_angle = 73.765564
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="2"]
+amount = 2
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_8r0wo")
+draw_pass_1 = SubResource("QuadMesh_5ht31")
