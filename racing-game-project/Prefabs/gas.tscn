@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://btc3gv71h2ry"]
+[gd_scene load_steps=14 format=3 uid="uid://btc3gv71h2ry"]
 
 [ext_resource type="PackedScene" uid="uid://f58twdkoc7ye" path="res://Models/jerrycan_low/jerrycan_low.fbx" id="1_yjcoj"]
 [ext_resource type="Texture2D" uid="uid://c8ljbxl4vo5la" path="res://Models/jerrycan_low/textures/jerrycan_mat_Diffuse.png" id="2_uf24o"]
@@ -13,11 +13,25 @@ normal_texture = ExtResource("3_vfmmi")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8r0wo"]
 
+[sub_resource type="Curve" id="Curve_8r0wo"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.21276593, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_i30kd"]
+curve = SubResource("Curve_8r0wo")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8r0wo"]
+emission_shape_offset = Vector3(0, 0.15, 0)
+emission_shape = 2
+emission_sphere_radius = 0.25
+gravity = Vector3(0, -0.05, 0)
+scale_min = 0.01
+scale_max = 0.03
+scale_curve = SubResource("CurveTexture_i30kd")
 
 [sub_resource type="Gradient" id="Gradient_i30kd"]
 offsets = PackedFloat32Array(0, 0.9953052)
-colors = PackedColorArray(1, 1, 0, 1, 1, 0.5411765, 0, 0)
+colors = PackedColorArray(0, 1, 0, 1, 0, 0.58431375, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_hyqtj"]
 gradient = SubResource("Gradient_i30kd")
@@ -54,7 +68,7 @@ light_color = Color(1.6605109e-06, 0.62763196, 0.13561162, 1)
 spot_angle = 73.765564
 
 [node name="GPUParticles3D" type="GPUParticles3D" parent="." index="2"]
-amount = 2
+amount = 200
 transform_align = 1
 process_material = SubResource("ParticleProcessMaterial_8r0wo")
 draw_pass_1 = SubResource("QuadMesh_5ht31")

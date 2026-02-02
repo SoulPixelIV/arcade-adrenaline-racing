@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cjp1miyepsf4v"]
+[gd_scene load_steps=14 format=3 uid="uid://cjp1miyepsf4v"]
 
 [ext_resource type="PackedScene" uid="uid://f58twdkoc7ye" path="res://Models/jerrycan_low/jerrycan_low.fbx" id="1_sa7ry"]
 [ext_resource type="Script" uid="uid://b7fmkaogxdjyh" path="res://Scripts/gasAnim.gd" id="2_d4wx6"]
@@ -11,6 +11,39 @@ normal_enabled = true
 normal_texture = ExtResource("3_d4wx6")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_px8t8"]
+
+[sub_resource type="Curve" id="Curve_px8t8"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.21276593, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_i30kd"]
+curve = SubResource("Curve_px8t8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_43psv"]
+emission_shape_offset = Vector3(0, 0.15, 0)
+emission_shape = 2
+emission_sphere_radius = 0.3
+gravity = Vector3(0, -0.05, 0)
+scale_min = 0.01
+scale_max = 0.03
+scale_curve = SubResource("CurveTexture_i30kd")
+
+[sub_resource type="Gradient" id="Gradient_i30kd"]
+colors = PackedColorArray(0.96151835, 4.4520943e-06, 9.62615e-07, 1, 1, 0.52878845, 0.43586552, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ujaq7"]
+gradient = SubResource("Gradient_i30kd")
+fill = 2
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhrt1"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0.973339, 0.68004876, 1)
+albedo_texture = SubResource("GradientTexture2D_ujaq7")
+
+[sub_resource type="QuadMesh" id="QuadMesh_4h263"]
+material = SubResource("StandardMaterial3D_mhrt1")
 
 [node name="jerrycan_low" instance=ExtResource("1_sa7ry")]
 transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
@@ -31,3 +64,9 @@ shape = SubResource("BoxShape3D_px8t8")
 transform = Transform3D(1.4285715, 0, 0, 0, -6.244484e-08, 1.4285715, 0, -1.4285715, -6.244484e-08, 0, 0, 0)
 light_color = Color(0.64427364, 0, 0.015360256, 1)
 spot_angle = 73.765564
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." index="2"]
+amount = 200
+transform_align = 1
+process_material = SubResource("ParticleProcessMaterial_43psv")
+draw_pass_1 = SubResource("QuadMesh_4h263")
