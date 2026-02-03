@@ -25,6 +25,7 @@ var currCheckpoint = 0
 @export var lockzone: Node3D
 @export var checkpoints: Array[Node3D]
 @export var intro: Node3D
+@export var finishLine: Node3D
 
 var grounded = false
 
@@ -119,6 +120,14 @@ func _physics_process(delta: float) -> void:
 				better_enemies += 1
 		
 		gamePlace = better_enemies + 1
+		
+		#Reaching the Finish
+		var clShape = null
+		if is_instance_valid(finishLine):
+			clShape = finishLine.get_node_or_null("Area3D")
+		if clShape:
+			if clShape.get_overlapping_bodies().has(self):
+				get_tree().change_scene_to_file("res://Scenes/win.tscn")
 		
 	#Sound
 	var pitch = lerp(0.5, 1.5, speed / MAX_SPEED)

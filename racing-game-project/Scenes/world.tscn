@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://qse6u0exylp5"]
+[gd_scene load_steps=85 format=3 uid="uid://qse6u0exylp5"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1v0n1xk3c6gl" path="res://Models/Kenney-Models/roadStartPositions.obj" id="1_1cojt"]
 [ext_resource type="ArrayMesh" uid="uid://5q4raib2spkx" path="res://Models/Kenney-Models/roadStart.obj" id="2_yq1aw"]
@@ -162,12 +162,16 @@ albedo_texture = SubResource("GradientTexture2D_vhf2b")
 [sub_resource type="QuadMesh" id="QuadMesh_kwnki"]
 material = SubResource("StandardMaterial3D_g44x5")
 
+[sub_resource type="BoxMesh" id="BoxMesh_36g3o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vhf2b"]
+
 [node name="World" type="Node3D"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "enemies", "gas", "gasBig", "lockzone", "checkpoints", "intro") instance=ExtResource("27_hmc15")]
+[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "enemies", "gas", "gasBig", "lockzone", "checkpoints", "intro", "finishLine") instance=ExtResource("27_hmc15")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32637048, 0, 0.16292945)
 timer = NodePath("../../UI/TimeLeft")
 score = NodePath("../../UI/Score")
@@ -178,6 +182,7 @@ gasBig = [NodePath("../jerrycan_low15BIG"), NodePath("../jerrycan_low37BIG"), No
 lockzone = NodePath("../../lockZone")
 checkpoints = [NodePath("../../Checkpoints/checkpoint"), NodePath("../../Checkpoints/checkpoint2"), NodePath("../../Checkpoints/checkpoint3"), NodePath("../../Checkpoints/checkpoint4"), NodePath("../../Checkpoints/checkpoint5"), NodePath("../../Checkpoints/checkpoint6"), NodePath("../../Checkpoints/checkpoint7"), NodePath("../../Checkpoints/checkpoint8"), NodePath("../../Checkpoints/checkpoint9"), NodePath("../../Checkpoints/checkpoint10"), NodePath("../../Checkpoints/checkpoint11"), NodePath("../../Checkpoints/checkpoint12")]
 intro = NodePath("../../Intro")
+finishLine = NodePath("../../Finishline")
 
 [node name="RoadStartPositions" type="MeshInstance3D" parent="Node3D"]
 mesh = ExtResource("1_1cojt")
@@ -5760,3 +5765,15 @@ process_material = SubResource("ParticleProcessMaterial_gwaj6")
 draw_pass_1 = SubResource("QuadMesh_kwnki")
 script = ExtResource("55_36g3o")
 camera = NodePath("../Node3D/Camera3D")
+
+[node name="Finishline" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.0819407, 0, 0, 0, 1, 0, 0, 0, 0.2491638, -0.5181103, 0.29474914, 3.0583355)
+mesh = SubResource("BoxMesh_36g3o")
+skeleton = NodePath("")
+
+[node name="Area3D" type="Area3D" parent="Finishline"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Finishline/Area3D"]
+shape = SubResource("BoxShape3D_vhf2b")
