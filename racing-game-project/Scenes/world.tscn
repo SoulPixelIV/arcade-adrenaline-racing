@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://qse6u0exylp5"]
+[gd_scene load_steps=87 format=3 uid="uid://qse6u0exylp5"]
 
 [ext_resource type="ArrayMesh" uid="uid://b1v0n1xk3c6gl" path="res://Models/Kenney-Models/roadStartPositions.obj" id="1_1cojt"]
 [ext_resource type="ArrayMesh" uid="uid://5q4raib2spkx" path="res://Models/Kenney-Models/roadStart.obj" id="2_yq1aw"]
@@ -166,16 +166,21 @@ material = SubResource("StandardMaterial3D_g44x5")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_vhf2b"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_vhf2b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g44x5"]
+
 [node name="World" type="Node3D"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "enemies", "gas", "gasBig", "lockzone", "checkpoints", "intro", "finishLine") instance=ExtResource("27_hmc15")]
+[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "speedometer", "enemies", "gas", "gasBig", "lockzone", "checkpoints", "intro", "finishLine", "checkpoint1", "checkpoint2") instance=ExtResource("27_hmc15")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32637048, 0, 0.16292945)
 timer = NodePath("../../UI/TimeLeft")
 score = NodePath("../../UI/Score")
 place = NodePath("../../UI/Place")
+speedometer = NodePath("../../UI/Speedometer")
 enemies = [NodePath("../../Enemy"), NodePath("../../Enemy2"), NodePath("../../Enemy3")]
 gas = [NodePath("../jerrycan_low"), NodePath("../jerrycan_low2"), NodePath("../jerrycan_low3"), NodePath("../jerrycan_low4"), NodePath("../jerrycan_low5"), NodePath("../jerrycan_low6"), NodePath("../jerrycan_low7"), NodePath("../jerrycan_low8"), NodePath("../jerrycan_low9"), NodePath("../jerrycan_low10"), NodePath("../jerrycan_low11"), NodePath("../jerrycan_low12"), NodePath("../jerrycan_low13"), NodePath("../jerrycan_low14"), NodePath("../jerrycan_low16"), NodePath("../jerrycan_low17"), NodePath("../jerrycan_low18"), NodePath("../jerrycan_low19"), NodePath("../jerrycan_low20"), NodePath("../jerrycan_low21"), NodePath("../jerrycan_low22"), NodePath("../jerrycan_low23"), NodePath("../jerrycan_low24"), NodePath("../jerrycan_low25"), NodePath("../jerrycan_low26"), NodePath("../jerrycan_low27"), NodePath("../jerrycan_low28"), NodePath("../jerrycan_low29"), NodePath("../jerrycan_low30"), NodePath("../jerrycan_low31"), NodePath("../jerrycan_low32"), NodePath("../jerrycan_low33"), NodePath("../jerrycan_low34"), NodePath("../jerrycan_low35"), NodePath("../jerrycan_low36"), NodePath("../jerrycan_low38"), NodePath("../jerrycan_low39"), NodePath("../jerrycan_low40"), NodePath("../jerrycan_low41"), NodePath("../jerrycan_low42"), NodePath("../jerrycan_low43"), NodePath("../jerrycan_low44"), NodePath("../jerrycan_low45"), NodePath("../jerrycan_low47"), NodePath("../jerrycan_low48"), NodePath("../jerrycan_low50"), NodePath("../jerrycan_low51"), NodePath("../jerrycan_low53"), NodePath("../jerrycan_low54"), NodePath("../jerrycan_low55"), NodePath("../jerrycan_low56"), NodePath("../jerrycan_low57"), NodePath("../jerrycan_low58")]
 gasBig = [NodePath("../jerrycan_low15BIG"), NodePath("../jerrycan_low37BIG"), NodePath("../jerrycan_low46BIG"), NodePath("../jerrycan_low49BIG"), NodePath("../jerrycan_low52BIG"), NodePath("../jerrycan_low59BIG"), NodePath("../jerrycan_low60BIG")]
@@ -183,6 +188,8 @@ lockzone = NodePath("../../lockZone")
 checkpoints = [NodePath("../../Checkpoints/checkpoint"), NodePath("../../Checkpoints/checkpoint2"), NodePath("../../Checkpoints/checkpoint3"), NodePath("../../Checkpoints/checkpoint4"), NodePath("../../Checkpoints/checkpoint5"), NodePath("../../Checkpoints/checkpoint6"), NodePath("../../Checkpoints/checkpoint7"), NodePath("../../Checkpoints/checkpoint8"), NodePath("../../Checkpoints/checkpoint9"), NodePath("../../Checkpoints/checkpoint10"), NodePath("../../Checkpoints/checkpoint11"), NodePath("../../Checkpoints/checkpoint12")]
 intro = NodePath("../../Intro")
 finishLine = NodePath("../../Finishline")
+checkpoint1 = NodePath("../../Checkpoint1")
+checkpoint2 = NodePath("../../Checkpoint2")
 
 [node name="RoadStartPositions" type="MeshInstance3D" parent="Node3D"]
 mesh = ExtResource("1_1cojt")
@@ -5166,11 +5173,11 @@ script = ExtResource("43_jwdyn")
 intro = NodePath("../../Intro")
 
 [node name="Place" type="Label" parent="UI"]
-offset_left = 1616.0
-offset_top = 848.0
-offset_right = 1863.0
-offset_bottom = 1080.0
-theme_override_font_sizes/font_size = 170
+offset_left = 1688.0
+offset_top = 248.0
+offset_right = 1904.0
+offset_bottom = 426.0
+theme_override_font_sizes/font_size = 130
 text = "4/4"
 
 [node name="Score" type="Label" parent="UI"]
@@ -5180,6 +5187,23 @@ offset_right = 515.0
 offset_bottom = 1048.0
 theme_override_font_sizes/font_size = 60
 text = "Score: 0"
+
+[node name="Speedometer" type="Label" parent="UI"]
+offset_left = 1496.0
+offset_top = 920.0
+offset_right = 1736.0
+offset_bottom = 1098.0
+theme_override_font_sizes/font_size = 130
+text = "0"
+horizontal_alignment = 2
+
+[node name="kmh" type="Label" parent="UI"]
+offset_left = 1744.0
+offset_top = 992.0
+offset_right = 1897.0
+offset_bottom = 1075.0
+theme_override_font_sizes/font_size = 60
+text = "km/h"
 
 [node name="SubViewport" type="SubViewport" parent="UI"]
 transparent_bg = true
@@ -5768,6 +5792,7 @@ camera = NodePath("../Node3D/Camera3D")
 
 [node name="Finishline" type="MeshInstance3D" parent="."]
 transform = Transform3D(3.0819407, 0, 0, 0, 1, 0, 0, 0, 0.2491638, -0.5181103, 0.29474914, 3.0583355)
+visible = false
 mesh = SubResource("BoxMesh_36g3o")
 skeleton = NodePath("")
 
@@ -5777,3 +5802,28 @@ collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Finishline/Area3D"]
 shape = SubResource("BoxShape3D_vhf2b")
+
+[node name="Checkpoint2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.931084e-07, 0, -0.18828306, 0, 3.6068776, 0, 6.7055383, 0, -8.2301135e-09, -22.43051, 0, -10.364557)
+visible = false
+mesh = SubResource("BoxMesh_vhf2b")
+skeleton = NodePath("../Checkpoint1")
+
+[node name="Area3D" type="Area3D" parent="Checkpoint2"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Checkpoint2/Area3D"]
+shape = SubResource("BoxShape3D_g44x5")
+
+[node name="Checkpoint1" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.841854, 0, 0, 0, 2.6107845, 0, 0, 0, 0.43391597, -33.519787, 0, 10.229978)
+visible = false
+mesh = SubResource("BoxMesh_vhf2b")
+
+[node name="Area3D" type="Area3D" parent="Checkpoint1"]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Checkpoint1/Area3D"]
+shape = SubResource("BoxShape3D_g44x5")

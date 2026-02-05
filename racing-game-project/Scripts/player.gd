@@ -8,6 +8,7 @@ extends VehicleBody3D
 var gamePlace = 0
 var gameScore = 0
 var currCheckpoint = 0
+var speedometerTimer = 3
 
 @onready var wheel_fl: VehicleWheel3D = $VehicleWheel3DFL
 @onready var wheel_fr: VehicleWheel3D = $VehicleWheel3DFR
@@ -19,6 +20,7 @@ var currCheckpoint = 0
 @export var timer: Label
 @export var score: Label
 @export var place: Label
+@export var speedometer: Label
 @export var enemies: Array[Node3D]
 @export var gas: Array[Node3D]
 @export var gasBig: Array[Node3D]
@@ -26,6 +28,11 @@ var currCheckpoint = 0
 @export var checkpoints: Array[Node3D]
 @export var intro: Node3D
 @export var finishLine: Node3D
+@export var checkpoint1: Node3D
+@export var checkpoint2: Node3D
+
+var passedCheckpoint1 = false;
+var passedCheckpoint2 = false;
 
 var grounded = false
 
@@ -100,6 +107,12 @@ func _physics_process(delta: float) -> void:
 		#Place
 		place.text = str(gamePlace) + "/4"
 		
+		#Speedometer
+		speedometerTimer -= delta * 45
+		if speedometerTimer < 0:
+			speedometer.text = str(snapped(speed * 15.6, 0))
+			speedometerTimer = 3
+		
 		if currCheckpoint >= checkpoints.size():
 			return
 		
@@ -121,13 +134,33 @@ func _physics_process(delta: float) -> void:
 		
 		gamePlace = better_enemies + 1
 		
+		#Reaching Checkpoint1
+		var checkpoint1Shape = null
+		if is_instance_valid(checkpoint1):
+			checkpoint1Shape = checkpoint1.get_node_or_null("Area3D")
+		if checkpoint1Shape:
+			if checkpoint1Shape.get_overlapping_bodies().has(self):
+				passedCheckpoint1 = true
+				
+		#Reaching Checkpoint2
+		var checkpoint2Shape = null
+		if is_instance_valid(checkpoint2):
+			checkpoint2Shape = checkpoint2.get_node_or_null("Area3D")
+		if checkpoint2Shape:
+			if checkpoint2Shape.get_overlapping_bodies().has(self):
+				passedCheckpoint2 = true
+				
 		#Reaching the Finish
 		var clShape = null
 		if is_instance_valid(finishLine):
 			clShape = finishLine.get_node_or_null("Area3D")
 		if clShape:
 			if clShape.get_overlapping_bodies().has(self):
-				get_tree().change_scene_to_file("res://Scenes/win.tscn")
+				if passedCheckpoint1 && passedCheckpoint2:
+					if gamePlace == 1:
+						get_tree().change_scene_to_file("res://Scenes/win.tscn")
+					else:
+						get_tree().change_scene_to_file("res://Scenes/lose.tscn")
 		
 	#Sound
 	var pitch = lerp(0.5, 1.5, speed / MAX_SPEED)
