@@ -43,7 +43,9 @@ text = "Music Volume"
 
 [node name="MusicSlider" type="HSlider" parent="VBoxContainer"]
 layout_mode = 2
-value = 70.0
+max_value = 1.0
+step = 0.001
+value = 1.0
 script = ExtResource("3_lhmql")
 bus_name = "music"
 
