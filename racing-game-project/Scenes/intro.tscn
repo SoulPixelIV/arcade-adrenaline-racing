@@ -121,7 +121,7 @@ adjustment_saturation = 1.2
 [sub_resource type="Curve3D" id="Curve3D_e0xqf"]
 bake_interval = 0.1
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.035, 0.265, 1.47, 4.35, 0, 0, -1.135, 0, 0, -7.215, 1.22, 16.065, 4.48, 0, 0, -1.4, 0, 0, -17.9, 0.825, 18.945, 0, 0, 2.42, 0.26, 0, -0.915, -31, 1.725, 13.54, -4.615, 0, 0, 0, 0, 0, -32.315, 1.525, -10.545, -1.345, 0, 0.715, 1, 0, -0.34, -18.995, 1.225, -10.545, -2.52, 0, 0, 3.795, 0, 0, -13.13, 1.76, -14.665, 0, 0, 0, 0, 0, 0, -2.95, 1.015, -3.76),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.035, 0.265, 1.47, 1.49, 0, -0.805, -0.21, 0, 0.335, -7.215, 1.22, 16.065, 4.48, 0, 0, -1.4, 0, 0, -17.9, 0.825, 18.945, 0, 0, 2.42, 0.26, 0, -0.915, -31, 1.725, 13.54, -4.615, 0, 0, 0, 0, 0, -32.315, 1.525, -10.545, -1.345, 0, 0.715, 1, 0, -0.34, -18.995, 1.225, -10.545, -2.52, 0, 0, 3.795, 0, 0, -13.13, 1.76, -14.665, 0, 0, 0, 0, 0, 0, -2.95, 1.015, -3.76),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
@@ -1100,7 +1100,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 14)
 mesh = ExtResource("17_3r2a1")
 
 [node name="TreeLarge5" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 16.619709)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.173466, 0, 16.223675)
 mesh = ExtResource("17_3r2a1")
 
 [node name="TreeLarge6" type="MeshInstance3D" parent="Node3D"]
@@ -5616,7 +5616,7 @@ skeleton = NodePath("../../Waypoints2")
 curve = SubResource("Curve3D_e0xqf")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.98080564, 0.012481453, 0.1944463, 9.31304e-10, 0.9979031, -0.064033166, -0.19488434, -0.06281612, -0.978601, 0.035, 0.265, 1.47)
+transform = Transform3D(-0.92270255, 0.024577964, 0.38456205, -9.312848e-10, 0.9979069, -0.06375986, -0.38540718, -0.058842055, -0.9206792, 0.035, 0.265, 1.47)
 script = ExtResource("46_wc636")
 
 [node name="Camera3D" type="Camera3D" parent="Path3D/PathFollow3D"]
