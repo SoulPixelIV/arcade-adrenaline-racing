@@ -130,7 +130,9 @@ func _physics_process(delta: float) -> void:
 					currCheckpoint += 1
 				
 			if enemyDistToCheckpoint.length() < distToCheckpoint.length():
-				better_enemies += 1
+				var distToPlayer = global_position - e.global_position
+				if distToPlayer.length() < 50:
+					better_enemies += 1
 		
 		gamePlace = better_enemies + 1
 		
