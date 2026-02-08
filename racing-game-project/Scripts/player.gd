@@ -123,7 +123,6 @@ func _physics_process(delta: float) -> void:
 		if distToCheckpoint.length() < 10:
 			if currCheckpoint < checkpoints.size() - 1:
 				currCheckpoint += 1
-		print("Distance to Checkpoint" + str(distToCheckpoint.length()))
 		for e in enemies:
 			if not is_instance_valid(e):
 				continue
