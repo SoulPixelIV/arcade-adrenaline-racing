@@ -173,24 +173,23 @@ material = SubResource("StandardMaterial3D_g44x5")
 [node name="World" type="Node3D"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 
-[node name="Player" parent="." node_paths=PackedStringArray("timer", "score", "place", "speedometer", "enemies", "gas", "gasBig", "lockzone", "checkpoints", "intro", "finishLine", "checkpoint1", "checkpoint2", "camera") instance=ExtResource("27_hmc15")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32637048, 0, 0.16292945)
-timer = NodePath("../UI/TimeLeft")
-score = NodePath("../UI/Score")
-place = NodePath("../UI/Place")
-speedometer = NodePath("../UI/Speedometer")
-enemies = [NodePath("../Enemy"), NodePath("../Enemy2"), NodePath("../Enemy3")]
-gas = [NodePath("../Node3D/jerrycan_low"), NodePath("../Node3D/jerrycan_low2"), NodePath("../Node3D/jerrycan_low3"), NodePath("../Node3D/jerrycan_low4"), NodePath("../Node3D/jerrycan_low5"), NodePath("../Node3D/jerrycan_low6"), NodePath("../Node3D/jerrycan_low7"), NodePath("../Node3D/jerrycan_low8"), NodePath("../Node3D/jerrycan_low9"), NodePath("../Node3D/jerrycan_low10"), NodePath("../Node3D/jerrycan_low11"), NodePath("../Node3D/jerrycan_low12"), NodePath("../Node3D/jerrycan_low13"), NodePath("../Node3D/jerrycan_low14"), NodePath("../Node3D/jerrycan_low16"), NodePath("../Node3D/jerrycan_low17"), NodePath("../Node3D/jerrycan_low18"), NodePath("../Node3D/jerrycan_low19"), NodePath("../Node3D/jerrycan_low20"), NodePath("../Node3D/jerrycan_low21"), NodePath("../Node3D/jerrycan_low22"), NodePath("../Node3D/jerrycan_low23"), NodePath("../Node3D/jerrycan_low24"), NodePath("../Node3D/jerrycan_low25"), NodePath("../Node3D/jerrycan_low26"), NodePath("../Node3D/jerrycan_low27"), NodePath("../Node3D/jerrycan_low28"), NodePath("../Node3D/jerrycan_low29"), NodePath("../Node3D/jerrycan_low30"), NodePath("../Node3D/jerrycan_low31"), NodePath("../Node3D/jerrycan_low32"), NodePath("../Node3D/jerrycan_low33"), NodePath("../Node3D/jerrycan_low34"), NodePath("../Node3D/jerrycan_low35"), NodePath("../Node3D/jerrycan_low36"), NodePath("../Node3D/jerrycan_low38"), NodePath("../Node3D/jerrycan_low39"), NodePath("../Node3D/jerrycan_low40"), NodePath("../Node3D/jerrycan_low41"), NodePath("../Node3D/jerrycan_low42"), NodePath("../Node3D/jerrycan_low43"), NodePath("../Node3D/jerrycan_low44"), NodePath("../Node3D/jerrycan_low45"), NodePath("../Node3D/jerrycan_low47"), NodePath("../Node3D/jerrycan_low48"), NodePath("../Node3D/jerrycan_low50"), NodePath("../Node3D/jerrycan_low51"), NodePath("../Node3D/jerrycan_low53"), NodePath("../Node3D/jerrycan_low54"), NodePath("../Node3D/jerrycan_low55"), NodePath("../Node3D/jerrycan_low56"), NodePath("../Node3D/jerrycan_low57"), NodePath("../Node3D/jerrycan_low58")]
-gasBig = [NodePath("../Node3D/jerrycan_low15BIG"), NodePath("../Node3D/jerrycan_low37BIG"), NodePath("../Node3D/jerrycan_low46BIG"), NodePath("../Node3D/jerrycan_low49BIG"), NodePath("../Node3D/jerrycan_low52BIG"), NodePath("../Node3D/jerrycan_low59BIG"), NodePath("../Node3D/jerrycan_low60BIG")]
-lockzone = NodePath("../lockZone")
-checkpoints = [NodePath("../Checkpoints/checkpoint"), NodePath("../Checkpoints/checkpoint2"), NodePath("../Checkpoints/checkpoint3"), NodePath("../Checkpoints/checkpoint4"), NodePath("../Checkpoints/checkpoint5"), NodePath("../Checkpoints/checkpoint6"), NodePath("../Checkpoints/checkpoint7"), NodePath("../Checkpoints/checkpoint8"), NodePath("../Checkpoints/checkpoint9"), NodePath("../Checkpoints/checkpoint10"), NodePath("../Checkpoints/checkpoint11"), NodePath("../Checkpoints/checkpoint12")]
-intro = NodePath("../Intro")
-finishLine = NodePath("../Finishline")
-checkpoint1 = NodePath("../Checkpoint1")
-checkpoint2 = NodePath("../Checkpoint2")
-camera = NodePath("../Node3D/Camera3D")
-
 [node name="Node3D" type="Node3D" parent="."]
+
+[node name="Player" parent="Node3D" node_paths=PackedStringArray("timer", "score", "place", "speedometer", "enemies", "gas", "gasBig", "lockzone", "checkpoints", "intro", "finishLine", "checkpoint1", "checkpoint2") instance=ExtResource("27_hmc15")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32637048, 0, 0.16292945)
+timer = NodePath("../../UI/TimeLeft")
+score = NodePath("../../UI/Score")
+place = NodePath("../../UI/Place")
+speedometer = NodePath("../../UI/Speedometer")
+enemies = [NodePath("../../Enemy"), NodePath("../../Enemy2"), NodePath("../../Enemy3")]
+gas = [NodePath("../jerrycan_low"), NodePath("../jerrycan_low2"), NodePath("../jerrycan_low3"), NodePath("../jerrycan_low4"), NodePath("../jerrycan_low5"), NodePath("../jerrycan_low6"), NodePath("../jerrycan_low7"), NodePath("../jerrycan_low8"), NodePath("../jerrycan_low9"), NodePath("../jerrycan_low10"), NodePath("../jerrycan_low11"), NodePath("../jerrycan_low12"), NodePath("../jerrycan_low13"), NodePath("../jerrycan_low14"), NodePath("../jerrycan_low16"), NodePath("../jerrycan_low17"), NodePath("../jerrycan_low18"), NodePath("../jerrycan_low19"), NodePath("../jerrycan_low20"), NodePath("../jerrycan_low21"), NodePath("../jerrycan_low22"), NodePath("../jerrycan_low23"), NodePath("../jerrycan_low24"), NodePath("../jerrycan_low25"), NodePath("../jerrycan_low26"), NodePath("../jerrycan_low27"), NodePath("../jerrycan_low28"), NodePath("../jerrycan_low29"), NodePath("../jerrycan_low30"), NodePath("../jerrycan_low31"), NodePath("../jerrycan_low32"), NodePath("../jerrycan_low33"), NodePath("../jerrycan_low34"), NodePath("../jerrycan_low35"), NodePath("../jerrycan_low36"), NodePath("../jerrycan_low38"), NodePath("../jerrycan_low39"), NodePath("../jerrycan_low40"), NodePath("../jerrycan_low41"), NodePath("../jerrycan_low42"), NodePath("../jerrycan_low43"), NodePath("../jerrycan_low44"), NodePath("../jerrycan_low45"), NodePath("../jerrycan_low47"), NodePath("../jerrycan_low48"), NodePath("../jerrycan_low50"), NodePath("../jerrycan_low51"), NodePath("../jerrycan_low53"), NodePath("../jerrycan_low54"), NodePath("../jerrycan_low55"), NodePath("../jerrycan_low56"), NodePath("../jerrycan_low57"), NodePath("../jerrycan_low58")]
+gasBig = [NodePath("../jerrycan_low15BIG"), NodePath("../jerrycan_low37BIG"), NodePath("../jerrycan_low46BIG"), NodePath("../jerrycan_low49BIG"), NodePath("../jerrycan_low52BIG"), NodePath("../jerrycan_low59BIG"), NodePath("../jerrycan_low60BIG")]
+lockzone = NodePath("../../lockZone")
+checkpoints = [NodePath("../../Checkpoints/checkpoint"), NodePath("../../Checkpoints/checkpoint2"), NodePath("../../Checkpoints/checkpoint3"), NodePath("../../Checkpoints/checkpoint4"), NodePath("../../Checkpoints/checkpoint5"), NodePath("../../Checkpoints/checkpoint6"), NodePath("../../Checkpoints/checkpoint7"), NodePath("../../Checkpoints/checkpoint8"), NodePath("../../Checkpoints/checkpoint9"), NodePath("../../Checkpoints/checkpoint10"), NodePath("../../Checkpoints/checkpoint11"), NodePath("../../Checkpoints/checkpoint12")]
+intro = NodePath("../../Intro")
+finishLine = NodePath("../../Finishline")
+checkpoint1 = NodePath("../../Checkpoint1")
+checkpoint2 = NodePath("../../Checkpoint2")
 
 [node name="RoadStartPositions" type="MeshInstance3D" parent="Node3D"]
 mesh = ExtResource("1_1cojt")
@@ -4281,7 +4280,7 @@ skeleton = NodePath("../..")
 [node name="Camera3D" type="Camera3D" parent="Node3D" node_paths=PackedStringArray("target")]
 transform = Transform3D(-0.25, 0, -2.1855694e-08, 0, 0.25, 0, 2.1855694e-08, 0, -0.25, 0, 0.57062554, -0.055370092)
 script = ExtResource("29_qebug")
-target = NodePath("../../Player")
+target = NodePath("../Player")
 
 [node name="AudioListener3D" type="AudioListener3D" parent="Node3D/Camera3D"]
 
@@ -5216,7 +5215,7 @@ transform = Transform3D(-0.9999999, 8.742277e-08, 3.821371e-15, 0, -4.3711385e-0
 projection = 1
 size = 37.0
 script = ExtResource("43_6mm6r")
-player = NodePath("../../../Player")
+player = NodePath("../../../Node3D/Player")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="UI"]
 
@@ -5238,42 +5237,42 @@ texture = ExtResource("44_t6yt7")
 [node name="Checkpoints" type="Node3D" parent="."]
 
 [node name="checkpoint" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(4.5284925, 0, 0, 0, 1.4776695, 0, 0, 0, 3.0646727, -1.3833542, 0.15652204, 17.953289)
+transform = Transform3D(2.9207115, 0, 0, 0, 1.4776695, 0, 0, 0, 3.0646727, -1.3833542, 0.15652204, 17.953289)
 skeleton = NodePath("../..")
 
 [node name="checkpoint2" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(4.9883184, 0, 0, 0, 0.99315727, 0, 0, 0, 1.6603926, -33.47141, 0.15652204, 11.367119)
+transform = Transform3D(1.8576918, 0, 0, 0, 0.99315727, 0, 0, 0, 1.6603926, -33.47141, 0.15652204, 11.367119)
 skeleton = NodePath("../..")
 
 [node name="checkpoint3" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(1.9330947, 0, 0, 0, 0.5078285, 0, 0, 0, 1.8510419, -33.257614, 0.15652215, -9.798264)
+transform = Transform3D(1.1718862, 0, 0, 0, 0.5078285, 0, 0, 0, 1.16538, -33.257614, 0.15652215, -9.798264)
 
 [node name="checkpoint4" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(3.3192089, 0, 0, 0, 0.6190628, 0, 0, 0, 3.0389996, -27.757795, 0.15652215, -13.303799)
+transform = Transform3D(1.0955589, 0, 0, 0, 0.73731035, 0, 0, 0, 1.1866548, -28.355162, 0.15652215, -11.134619)
 
 [node name="checkpoint5" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(1.1428679, 0, 0, 0, 0.6028296, 0, 0, 0, 4.111818, -29.72611, 0.15652204, -19.713472)
+transform = Transform3D(1.1428679, 0, 0, 0, 0.6028296, 0, 0, 0, 1.3239019, -27.97609, 0.15652204, -18.580376)
 
 [node name="checkpoint6" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(4.565293, 0, 0, 0, 0.68607175, 0, 0, 0, 1.3298972, -36.45988, 0.15652204, -17.179712)
+transform = Transform3D(1.4643941, 0, 0, 0, 0.68607175, 0, 0, 0, 1.3298972, -35.953278, 0.15652204, -18.665771)
 
 [node name="checkpoint7" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(1.9809918, 0, 0, 0, 0.968425, 0, 0, 0, 1.2252445, -36.324562, 0.63460004, -11.850666)
+transform = Transform3D(1.2063668, 0, 0, 0, 0.968425, 0, 0, 0, 1.2252445, -35.919754, 0.63460004, -11.322305)
 
 [node name="checkpoint8" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(1.7882559, 0, 0, 0, 0.7203275, 0, 0, 0, 3.0282674, -15.234015, 0.15652204, -10.740149)
+transform = Transform3D(1.0420494, 0, 0, 0, 0.7203275, 0, 0, 0, 1.0345757, -15.234015, 0.15652204, -10.740149)
 
 [node name="checkpoint9" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(3.63889, 0, 0, 0, 0.69452655, 0, 0, 0, 1.0325698, -14.4203005, 0.15652204, -15.759856)
+transform = Transform3D(0.9797905, 0, 0, 0, 0.69452655, 0, 0, 0, 1.0325698, -14.4203005, 0.15652204, -16.524946)
 
 [node name="checkpoint10" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(3.6711159, 0, 0, 0, 0.78142464, 0, 0, 0, 1.0362784, -9.516223, 0.15652204, -15.102005)
+transform = Transform3D(1.0944481, 0, 0, 0, 0.78142464, 0, 0, 0, 1.0362784, -9.516223, 0.15652204, -16.154005)
 
 [node name="checkpoint11" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(1.0940638, 0, 0, 0, 0.6611122, 0, 0, 0, 5.1598086, -6.5479784, 0.15652192, -10.331844)
+transform = Transform3D(1.0940638, 0, 0, 0, 0.6611122, 0, 0, 0, 1.0823152, -8.82222, 0.15652192, -10.331844)
 
 [node name="checkpoint12" parent="Checkpoints" instance=ExtResource("45_al5m0")]
-transform = Transform3D(3.173621, 0, 0, 0, 0.7130066, 0, 0, 0, 1.1373161, -1.1219444, 0.15652204, 4.284086)
+transform = Transform3D(1.1899809, 0, 0, 0, 0.7130066, 0, 0, 0, 1.1373161, -1.1219444, 0.15652204, -8.721285)
 
 [node name="Enemy2" parent="." node_paths=PackedStringArray("waypoints", "slowdownZones", "intro", "checkpoints") instance=ExtResource("48_te07t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32859838, 0.031522393, 1.095367)

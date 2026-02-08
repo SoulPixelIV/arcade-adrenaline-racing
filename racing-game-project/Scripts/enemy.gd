@@ -15,6 +15,9 @@ extends VehicleBody3D
 @onready var wheel_bl: VehicleWheel3D = $VehicleWheel3DBL
 @onready var wheel_br: VehicleWheel3D = $VehicleWheel3DBR
 
+var currCheckpoint = 0
+@export var checkpoints: Array[Node3D]
+
 var grounded = false
 var in_slowzone = false
 var current_wp := 0
@@ -67,3 +70,12 @@ func _physics_process(delta: float) -> void:
 		#Switch Waypoint
 		if distance_to_target.length() < reach_distance:
 			current_wp = (current_wp + 1) % waypoints.size()
+			
+		#Count Checkpoints
+		if currCheckpoint >= checkpoints.size():
+			return
+		
+		var distToCheckpoint = checkpoints[currCheckpoint].global_position - global_position
+		if distToCheckpoint.length() < 3:
+			if currCheckpoint < checkpoints.size() - 1:
+				currCheckpoint += 1

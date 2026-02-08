@@ -30,6 +30,7 @@ var speedometerTimer = 3
 @export var finishLine: Node3D
 @export var checkpoint1: Node3D
 @export var checkpoint2: Node3D
+@export var camera: Node3D
 
 var passedCheckpoint1 = false;
 var passedCheckpoint2 = false;
@@ -116,22 +117,27 @@ func _physics_process(delta: float) -> void:
 		if currCheckpoint >= checkpoints.size():
 			return
 		
-		var distToCheckpoint = checkpoints[currCheckpoint].global_position - global_position
-		
 		var better_enemies := 0
-		
+		#Count Up Checkpoint
+		var distToCheckpoint = checkpoints[currCheckpoint].global_position - camera.global_position
+		if distToCheckpoint.length() < 10:
+			if currCheckpoint < checkpoints.size() - 1:
+				currCheckpoint += 1
+		print("Distance to Checkpoint" + str(distToCheckpoint.length()))
 		for e in enemies:
 			if not is_instance_valid(e):
 				continue
 		
-			var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - e.global_position
-			if distToCheckpoint.length() < 3 || enemyDistToCheckpoint.length() < 3:
-				if currCheckpoint < checkpoints.size() - 1:
-					currCheckpoint += 1
-				
-			if enemyDistToCheckpoint.length() < distToCheckpoint.length():
-				var distToPlayer = global_position - e.global_position
-				if distToPlayer.length() < 50:
+			###Check Checkpoint Count###
+			#Is Enemy further then Player
+			if e.currCheckpoint > currCheckpoint:
+				better_enemies += 1
+			#Is Enemy at same checkpoint as Player
+			elif e.currCheckpoint == currCheckpoint:
+				var enemyDistToCheckpoint = checkpoints[currCheckpoint].global_position - e.global_position
+				#Is Enemy closer to next checkpoint
+				distToCheckpoint = checkpoints[currCheckpoint].global_position - camera.global_position
+				if enemyDistToCheckpoint.length() < distToCheckpoint.length():
 					better_enemies += 1
 		
 		gamePlace = better_enemies + 1
